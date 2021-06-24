@@ -6,7 +6,7 @@ import android.database.sqlite.*;
 import androidx.annotation.*;
 
 class CalorieTrackerDBhelper extends SQLiteOpenHelper {
-	private static final String DATABASE_NAME = "shoplist.db";
+	private static final String DATABASE_NAME = "calorieTracker.db";
 	private static final int DATABASE_VERSION = 1;
 
 	public CalorieTrackerDBhelper(@Nullable Context context) {
