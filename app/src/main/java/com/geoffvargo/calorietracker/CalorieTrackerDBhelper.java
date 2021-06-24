@@ -12,7 +12,8 @@ class CalorieTrackerDBhelper extends SQLiteOpenHelper {
 
 	// Database creation sql statement
 	private static final String CREATE_TABLE_ITEM = "CREATE TABLE item(_id INTEGER PRIMARY KEY AUTOINCREMENT, food_name TEXT NOT NULL, " +
-	                                                "servings FLOAT DEFAULT 1.0, carbs FLOAT DEFAULT 0.0, protein FLOAT DEFAULT 0.0, fat FLOAT DEFAULT 0.0);";
+	                                                "servings FLOAT DEFAULT 1.0 NOT NULL, serving_size FLOAT NOT NULL, time TIMESTAMP, " +
+	                                                "carbs FLOAT, protein FLOAT, fat FLOAT, meal_name TEXT NOT NULL);";
 
 	public CalorieTrackerDBhelper(@Nullable Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
