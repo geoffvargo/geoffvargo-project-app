@@ -21,15 +21,10 @@ class FoodItemDataSource {
 		dbHelper.close();
 	}
 
-	public boolean insertItem(FoodItem foodItem) {
-		ContentValues initialValues = new ContentValues();
-
-		initialValues.put("food_name", foodItem.getFood_name());
-		initialValues.put("servings", foodItem.getServings());
-		initialValues.put("serving_size", foodItem.getServing_size());
-//		initialValues.put("time", String.valueOf(foodItem.getTime()));
-		initialValues.put("servings", foodItem.getServings());
-
-		return database.insert("food_item", null, initialValues) > 0;
+	public void insertItem(FoodItem foodItem) {
+		String statement = "INSERT INTO food_item(food_name, servings, serving_size, time, carbs, protein, fat, meal_name) " +
+		                   "VALUES (" + foodItem.getFood_name() + ", " + foodItem.getServings() + ", " + foodItem.getServing_size() + ", " + foodItem.getTime() +
+		                   ", " + foodItem.getCarbs() + ", " + foodItem.getProtein() + ", " + foodItem.getFat() + ", " + foodItem.getMeal_name() + ");";
+		database.execSQL(statement);
 	}
 }

@@ -1,19 +1,19 @@
 package com.geoffvargo.calorietracker;
 
-import java.time.*;
+import java.sql.*;
 
 public class FoodItem {
 	private int _id;
 	private String food_name;
 	private float servings;
 	private float serving_size;
-	private ZonedDateTime time;
+	private Timestamp time;
 	private float carbs;
 	private float protein;
 	private float fat;
 	private Meal meal_name;
 
-	public FoodItem(int _id, String food_name, float servings, float serving_size, ZonedDateTime time, float carbs, float protein, float fat, Meal meal_name) {
+	public FoodItem(int _id, String food_name, float servings, float serving_size, Timestamp time, float carbs, float protein, float fat, Meal meal_name) {
 		this._id = _id;
 		this.food_name = food_name;
 		this.servings = servings;
@@ -57,11 +57,11 @@ public class FoodItem {
 		this.serving_size = serving_size;
 	}
 
-	public ZonedDateTime getTime() {
+	public Timestamp getTime() {
 		return time;
 	}
 
-	public void setTime(ZonedDateTime time) {
+	public void setTime(Timestamp time) {
 		this.time = time;
 	}
 
