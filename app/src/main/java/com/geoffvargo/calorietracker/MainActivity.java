@@ -4,6 +4,8 @@ import android.os.*;
 import android.view.*;
 import android.widget.*;
 
+import com.google.android.material.appbar.*;
+
 import java.sql.*;
 import java.util.*;
 
@@ -20,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		Window w = getWindow();
 		w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
+		toolBarLayout.setTitle(getTitle());
+		setSupportActionBar(findViewById(R.id.toolbar));
 	}
 
 	@Override
