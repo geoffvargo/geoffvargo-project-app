@@ -8,17 +8,24 @@ public class FoodItem {
 	private float servings;
 	private float serving_size;
 	private Timestamp time;
+	private int calories;
 	private float carbs;
 	private float protein;
 	private float fat;
 	private Meal meal_name;
 
-	public FoodItem(int _id, String food_name, float servings, float serving_size, Timestamp time, float carbs, float protein, float fat, Meal meal_name) {
+	public FoodItem() {
+		this._id = -1;
+		this.meal_name = Meal.NONE;
+	}
+
+	public FoodItem(int _id, String food_name, float servings, float serving_size, Timestamp time, int calories, float carbs, float protein, float fat, Meal meal_name) {
 		this._id = _id;
 		this.food_name = food_name;
 		this.servings = servings;
 		this.serving_size = serving_size;
 		this.time = time;
+		this.calories = calories;
 		this.carbs = carbs;
 		this.protein = protein;
 		this.fat = fat;
@@ -95,5 +102,13 @@ public class FoodItem {
 
 	public void setMeal_name(Meal meal_name) {
 		this.meal_name = meal_name;
+	}
+
+	public int getCalories() {
+		return calories;
+	}
+
+	public void setCalories(int calories) {
+		this.calories = calories;
 	}
 }
