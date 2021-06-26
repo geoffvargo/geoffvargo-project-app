@@ -33,6 +33,12 @@ class FoodItemAdapter extends RecyclerView.Adapter {
 
 	@Override
 	public int getItemCount() {
-		return 0;
+		return foodItemData.size();
+	}
+
+	public class FoodItemViewHolder extends RecyclerView.ViewHolder {
+		public FoodItemViewHolder(@NonNull @NotNull View itemView) {
+			super(itemView);
+		}
 	}
 }
