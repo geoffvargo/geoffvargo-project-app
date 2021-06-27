@@ -20,6 +20,7 @@
 		android:layout_height="wrap_content"
 		android:layout_margin="8dp"
 		android:text="Name"
+		android:textColor="@android:color/secondary_text_light"
 		android:textSize="24sp"
 		android:typeface="normal"
 		app:layout_constraintStart_toStartOf="parent"
