@@ -8,9 +8,11 @@ import org.jetbrains.annotations.*;
 
 import java.util.*;
 
-import androidx.annotation.*;
 import androidx.recyclerview.widget.*;
 
+/**
+ *
+ */
 public class FoodItemAdapter extends RecyclerView.Adapter {
 	private ArrayList<FoodItem> foodItemData;
 	private Context parentContext;
@@ -21,21 +23,33 @@ public class FoodItemAdapter extends RecyclerView.Adapter {
 		this.parentContext = parentContext;
 	}
 
-	@NonNull
+	/**
+	 * Populates each ViewHolder with the details from its corresponding FoodItem object in the database.
+	 *
+	 * @param parent
+	 * 		The ViewGroup into which the new View will be added after it is bound to
+	 * 		an adapter position.
+	 * @param viewType
+	 * 		The view type of the new View.
+	 * @return A new ViewHolder that holds a View of the given view type.
+	 * @see #getItemViewType(int)
+	 * @see #onBindViewHolder(RecyclerView.ViewHolder, int)
+	 */
 	@NotNull
 	@Override
-	public RecyclerView.ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+	public RecyclerView.ViewHolder onCreateViewHolder(@NotNull ViewGroup parent, int viewType) {
 		View view = LayoutInflater.from(parentContext).inflate(R.layout.fooditem_view, parent, false);
 		return new FoodItemViewHolder(view);
 	}
 
 	@Override
-	public void onBindViewHolder(@NonNull @NotNull RecyclerView.ViewHolder holder, int position) {
+	public void onBindViewHolder(@NotNull RecyclerView.ViewHolder holder, int position) {
 		FoodItemViewHolder fh = (FoodItemViewHolder) holder;
 		curr = foodItemData.get(position);
 
 		fh.getName().setText(curr.getFood_name());
-//		fh.getCalories().setText(curr.getCalories());
+		fh.getCalories().setText(String.format(Locale.getDefault(), "%d cal", curr.getCalories()));
+		fh.getTime().setText(curr.getTime().toString());
 	}
 
 	@Override

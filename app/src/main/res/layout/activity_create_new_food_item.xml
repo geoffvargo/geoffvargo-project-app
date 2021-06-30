@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:minWidth="320dp"
+                                                   tools:context=".CreateNewFoodItem">
+	
+	<EditText
+		android:id="@+id/foodItemNameINPUT"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:hint="@string/enter_food_name"
+		android:importantForAutofill="no"
+		android:inputType="textPersonName"
+		android:minWidth="128dp"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	<EditText
+		android:id="@+id/foodItemCaloriesINPUT"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:hint="@string/number_of_calories"
+		android:importantForAutofill="no"
+		android:inputType="number"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/foodItemNameINPUT" />
+	<EditText
+		android:id="@+id/foodItemCarbsINPUT"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:hint="@string/grams_of_carbsSTR"
+		android:importantForAutofill="no"
+		android:inputType="number"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/foodItemCaloriesINPUT" />
+	<EditText
+		android:id="@+id/foodItemProteinINPUT"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:hint="@string/grams_of_proteinSTR"
+		android:importantForAutofill="no"
+		android:inputType="number"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/foodItemCarbsINPUT" />
+	<EditText
+		android:id="@+id/foodItemFatINPUT"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:hint="@string/grams_of_fatSTR"
+		android:importantForAutofill="no"
+		android:inputType="number"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/foodItemProteinINPUT" />
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mealChooserSPNR">
+		<Button
+			android:id="@+id/createFoodItem_saveBTN"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_weight="1"
+			android:padding="8dp"
+			android:text="@string/saveSTR" />
+		<Button
+			android:id="@+id/createFoodItem_cancelBTN"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_weight="1"
+			android:padding="8dp"
+			android:text="@string/cancelSTR" />
+	</LinearLayout>
+	<Spinner
+		android:id="@+id/mealChooserSPNR"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/foodItemFatINPUT" />
+</androidx.constraintlayout.widget.ConstraintLayout>
