@@ -21,6 +21,18 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 	<EditText
+		android:id="@+id/foodItemServingSizeINPUT"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:hint="@string/service_size_in_ozSTR"
+		android:importantForAutofill="no"
+		android:inputType="number"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/foodItemNameINPUT" />
+	<EditText
 		android:id="@+id/foodItemCaloriesINPUT"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
@@ -31,7 +43,7 @@
 		android:padding="8dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/foodItemNameINPUT" />
+		app:layout_constraintTop_toBottomOf="@+id/foodItemServingSizeINPUT" />
 	<EditText
 		android:id="@+id/foodItemCarbsINPUT"
 		android:layout_width="0dp"
@@ -61,13 +73,48 @@
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:layout_margin="8dp"
+		android:padding="8dp"
 		android:hint="@string/grams_of_fatSTR"
 		android:importantForAutofill="no"
 		android:inputType="number"
-		android:padding="8dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/foodItemProteinINPUT" />
+	<LinearLayout
+		android:id="@+id/timePickerHSTACK"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:orientation="horizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mealChooserSPNR">
+		<TextView
+			android:id="@+id/timePickerLBL"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_weight="1"
+			android:padding="8dp"
+			android:text="" />
+		<Button
+			android:id="@+id/timePickerBTN"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_weight="1"
+			android:padding="8dp"
+			android:text="@string/edit_timeSTR" />
+	</LinearLayout>
+	<Spinner
+		android:id="@+id/mealChooserSPNR"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/foodItemFatINPUT" />
 	<LinearLayout
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -75,7 +122,7 @@
 		android:padding="8dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/mealChooserSPNR">
+		app:layout_constraintTop_toBottomOf="@+id/timePickerHSTACK">
 		<Button
 			android:id="@+id/createFoodItem_saveBTN"
 			style="?android:attr/buttonBarButtonStyle"
@@ -95,13 +142,4 @@
 			android:padding="8dp"
 			android:text="@string/cancelSTR" />
 	</LinearLayout>
-	<Spinner
-		android:id="@+id/mealChooserSPNR"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_margin="8dp"
-		android:padding="8dp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/foodItemFatINPUT" />
 </androidx.constraintlayout.widget.ConstraintLayout>

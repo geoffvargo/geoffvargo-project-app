@@ -12,4 +12,6 @@
 	<string name="grams_of_proteinSTR">Grams of Protein</string>
 	<string name="grams_of_carbsSTR">Grams of Carbs</string>
 	<string name="grams_of_fatSTR">Grams of Fat</string>
+	<string name="service_size_in_ozSTR">Service Size in oz</string>
+	<string name="edit_timeSTR">EDIT TIME</string>
 </resources>

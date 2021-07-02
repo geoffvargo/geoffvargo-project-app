@@ -3,6 +3,7 @@ package com.geoffvargo.calorietracker;
 import android.content.*;
 import android.database.*;
 import android.database.sqlite.*;
+import android.util.*;
 
 import java.sql.SQLException;
 import java.sql.*;
@@ -24,12 +25,57 @@ class FoodItemDataSource {
 		dbHelper.close();
 	}
 
-	public void insertItem(FoodItem foodItem) {
-		String statement = "INSERT INTO food_item(food_name, servings, serving_size, time, calories, carbs, protein, fat, meal_name) " +
-		                   "VALUES (" + foodItem.getFood_name() + ", " + foodItem.getServings() + ", " + foodItem.getServing_size() + ", " + foodItem.getTime() +
-		                   ", " + foodItem.getCalories() + "," + foodItem.getCarbs() + ", " + foodItem.getProtein() + ", " + foodItem.getFat() + ", " +
-		                   foodItem.getMeal_name() + ");";
-		database.execSQL(statement);
+	public boolean updateItem(FoodItem s) {
+		boolean didSucceed = false;
+		try {
+			Long          rowId         = (long) s.get_id();
+			ContentValues initialValues = new ContentValues();
+
+			initialValues.put("food_name", s.getFood_name());
+			initialValues.put("calorie", s.getCalories());
+			initialValues.put("carbs", s.getCarbs());
+			initialValues.put("protein", s.getProtein());
+			initialValues.put("fat", s.getFat());
+			initialValues.put("meal_name", s.getMeal_name().toString());
+//			initialValues.put("time", Timestamp.valueOf(Date.));
+
+			didSucceed = database.update("food_item", initialValues, "_id=" + rowId, null) > 0;
+		} catch (Exception e) {
+			Log.e(e.getClass().getCanonicalName(), e.getMessage(), e);
+		}
+		return didSucceed;
+	}
+
+	public boolean insertItem(FoodItem s) {
+		boolean didSucceed = false;
+		try {
+			Long          rowId         = (long) s.get_id();
+			ContentValues initialValues = new ContentValues();
+
+			initialValues.put("food_name", s.getFood_name());
+			initialValues.put("calories", s.getCalories());
+			initialValues.put("serving_size", s.getServing_size());
+			initialValues.put("carbs", s.getCarbs());
+			initialValues.put("protein", s.getProtein());
+			initialValues.put("fat", s.getFat());
+			initialValues.put("meal_name", s.getMeal_name().toString());
+//			initialValues.put("time", s.getTime().toString());
+
+			didSucceed = database.insert("food_item", null, initialValues) > 0;
+		} catch (Exception e) {
+			Log.e(e.getClass().getCanonicalName(), e.getMessage(), e);
+		}
+		return didSucceed;
+
+//		try {
+//			String statement = "INSERT INTO food_item(food_name, servings, serving_size, time, calories, carbs, protein, fat, meal_name) " +
+//			                   "VALUES (" + foodItem.getFood_name() + ", " + foodItem.getServings() + ", " + foodItem.getServing_size() + ", " + foodItem.getTime() +
+//			                   ", " + foodItem.getCalories() + "," + foodItem.getCarbs() + ", " + foodItem.getProtein() + ", " + foodItem.getFat() + ", " +
+//			                   foodItem.getMeal_name() + ");";
+//			database.execSQL(statement);
+//		} catch (Exception e) {
+//			Log.e("calorieTracker", e.getMessage(), e);
+//		}
 	}
 
 	public ArrayList<FoodItem> getItems() {
@@ -62,6 +108,7 @@ class FoodItemDataSource {
 			cursor.close();
 		} catch (Exception e) {
 			items = new ArrayList<>();
+			Log.e(e.getClass().getCanonicalName(), e.getMessage(), e);
 		}
 
 		return items;
