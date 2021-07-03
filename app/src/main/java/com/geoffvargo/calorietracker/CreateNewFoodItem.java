@@ -1,15 +1,24 @@
 package com.geoffvargo.calorietracker;
 
+import android.app.*;
 import android.os.*;
 import android.text.*;
 import android.util.*;
 import android.view.*;
 import android.widget.*;
 
-import androidx.appcompat.app.*;
-import androidx.fragment.app.*;
+import java.sql.*;
+import java.util.*;
 
-public class CreateNewFoodItem extends AppCompatActivity {
+import androidx.appcompat.app.*;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.*;
+
+public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+	private TimeViewModel tvm;
+	private final Calendar callie = Calendar.getInstance();
+	private Timestamp timestamp;
 	private FoodItem curr;
 	private EditText name;
 	private EditText serving_size;
@@ -17,6 +26,8 @@ public class CreateNewFoodItem extends AppCompatActivity {
 	private EditText carbs;
 	private EditText protein;
 	private EditText fat;
+	private Button timeBTN;
+	private TextView timeLBL;
 	private Spinner mealChooser;
 	private Button saveBTN;
 	private Button cancelBTN;
@@ -30,10 +41,27 @@ public class CreateNewFoodItem extends AppCompatActivity {
 
 		saveBTN = findViewById(R.id.createFoodItem_saveBTN);
 		cancelBTN = findViewById(R.id.createFoodItem_cancelBTN);
+		timeBTN = findViewById(R.id.timePickerBTN);
+		timeLBL = findViewById(R.id.timePickerLBL);
+		timestamp = new Timestamp(callie.getTimeInMillis());
+		timeLBL.setText(timestamp.toString());
+
+		tvm = new ViewModelProvider(this).get(TimeViewModel.class);
+		tvm.getSelectedTime().observe(this, t -> {
+			timestamp = t;
+			System.out.print(timestamp);
+			timeLBL.setText(timestamp.toString());
+		});
 
 		mealChooser = findViewById(R.id.mealChooserSPNR);
 		mealArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Meal.values());
 		mealChooser.setAdapter(mealArrayAdapter);
+
+		timeBTN.setOnClickListener(c -> {
+			FragmentManager fm    = getSupportFragmentManager();
+			TimeChooser     timey = new TimeChooser();
+			timey.show(fm, null);
+		});
 
 		saveBTN.setOnClickListener(c -> {
 			FoodItemDataSource ds = new FoodItemDataSource(this);
@@ -165,5 +193,17 @@ public class CreateNewFoodItem extends AppCompatActivity {
 	public void showTimePickerDialog(View v) {
 		DialogFragment newFragment = new TimeChooser();
 		newFragment.show(getSupportFragmentManager(), "timeChooser");
+	}
+
+	public Calendar getCallie() {
+		return callie;
+	}
+
+	public Timestamp getTimestamp() {
+		return timestamp;
+	}
+
+	@Override
+	public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 	}
 }
