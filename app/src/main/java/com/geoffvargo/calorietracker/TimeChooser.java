@@ -38,7 +38,6 @@ public class TimeChooser extends AppCompatDialogFragment implements TimePickerDi
 
 	public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 		// Do something with the time chosen by the user
-//		timestamp.setTime(c.getTimeInMillis());
 		c.set(Calendar.HOUR_OF_DAY, hourOfDay);
 		c.set(Calendar.MINUTE, minute);
 		timestamp = new Timestamp(c.getTimeInMillis());

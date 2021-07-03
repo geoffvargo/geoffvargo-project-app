@@ -188,6 +188,20 @@ public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDi
 
 			}
 		});
+		timeLBL.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				curr.setTime(timestamp);
+			}
+		});
 	}
 
 	public void showTimePickerDialog(View v) {
