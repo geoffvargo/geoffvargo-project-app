@@ -37,7 +37,7 @@ class FoodItemDataSource {
 			initialValues.put("protein", s.getProtein());
 			initialValues.put("fat", s.getFat());
 			initialValues.put("meal_name", s.getMeal_name().toString());
-//			initialValues.put("time", Timestamp.valueOf(Date.));
+			initialValues.put("time", s.getTime().toString());
 
 			didSucceed = database.update("food_item", initialValues, "_id=" + rowId, null) > 0;
 		} catch (Exception e) {
