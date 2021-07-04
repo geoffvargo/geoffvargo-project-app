@@ -9,22 +9,47 @@ import java.sql.SQLException;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * The type Food item data source.
+ */
 class FoodItemDataSource {
 	private SQLiteDatabase database;
 	private FoodItemDBHelper dbHelper;
 
+	/**
+	 * Instantiates a new Food item data source.
+	 *
+	 * @param context
+	 * 		the context used to instantiate the class
+	 */
 	FoodItemDataSource(Context context) {
 		dbHelper = new FoodItemDBHelper(context);
 	}
 
+	/**
+	 * Open.
+	 *
+	 * @throws SQLException
+	 * 		the sql exception
+	 */
 	public void open() throws SQLException {
 		database = dbHelper.getWritableDatabase();
 	}
 
+	/**
+	 * Close.
+	 */
 	public void close() {
 		dbHelper.close();
 	}
 
+	/**
+	 * Update item boolean.
+	 *
+	 * @param s
+	 * 		the s
+	 * @return the boolean
+	 */
 	public boolean updateItem(FoodItem s) {
 		boolean didSucceed = false;
 		try {
@@ -46,6 +71,13 @@ class FoodItemDataSource {
 		return didSucceed;
 	}
 
+	/**
+	 * Insert item boolean.
+	 *
+	 * @param s
+	 * 		the s
+	 * @return the boolean
+	 */
 	public boolean insertItem(FoodItem s) {
 		boolean didSucceed = false;
 		try {
@@ -78,6 +110,11 @@ class FoodItemDataSource {
 //		}
 	}
 
+	/**
+	 * Gets items.
+	 *
+	 * @return the items
+	 */
 	public ArrayList<FoodItem> getItems() {
 		ArrayList<FoodItem> items = new ArrayList<>();
 
