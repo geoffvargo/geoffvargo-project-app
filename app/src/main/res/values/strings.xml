@@ -47,4 +47,5 @@
 	<string name="fatSTR">Fat</string>
 	<string name="proteinSTR">Protein</string>
 	<string name="doneSTR">DONE</string>
+	<string name="exitSTR">EXIT</string>
 </resources>

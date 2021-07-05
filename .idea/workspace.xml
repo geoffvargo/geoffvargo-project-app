@@ -47,8 +47,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/InsightsActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_action_insight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_insight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_insight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_insight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_insight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_insights.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -523,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625517045229</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Finished implementing SettingsActivity: results can now be sorted according to column.">
+      <created>1625517266222</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1625517266222</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,10 +659,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="215" key="AndroidCreateResourceFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1625504360916" />
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625513800601">
+    <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625518280956">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog/0.0.1707.920@0.0.1707.920" timestamp="1625513800601" />
+    <state x="700" y="250" key="AndroidCreateXmlResourceDialog/0.0.1707.920@0.0.1707.920" timestamp="1625518280956" />
     <state x="648" y="207" key="AndroidProcessChooserDialog" timestamp="1625445490546">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -653,10 +671,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="165" key="AndroidThemeDialog/0.0.1707.920@0.0.1707.920" timestamp="1624676800935" />
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625517044545">
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625517265759">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625517044545" />
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625517265759" />
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1625517181906">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -709,10 +727,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="364" y="105" width="1223" height="709" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625512920761" />
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625517046284">
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625517268233">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625517046284" />
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625517268233" />
     <state x="669" y="238" key="chooseDestDirectoryDialog" timestamp="1624647690165">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -733,10 +751,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="600" y="355" key="git4idea.ui.GitResetDialog/0.0.1707.920@0.0.1707.920" timestamp="1624677620432" />
-    <state width="300" height="329" key="javadoc.popup.new" timestamp="1625517014130">
+    <state width="300" height="331" key="javadoc.popup.new" timestamp="1625518360848">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="300" height="329" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625517014130" />
+    <state width="300" height="331" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625518360848" />
     <state x="444" y="204" key="psd.add.library.dependency.panel.dimension" timestamp="1625294543129">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -779,7 +797,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java</url>
-          <line>76</line>
+          <line>83</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">

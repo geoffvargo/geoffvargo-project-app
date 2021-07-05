@@ -41,6 +41,14 @@
 					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintEnd_toEndOf="parent"
 					app:srcCompat="@drawable/ic_action_settings" />
+				<ImageButton
+					android:id="@+id/insightsBTN"
+					android:layout_width="54dp"
+					android:layout_height="47dp"
+					android:background="#00FFFFFF"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@+id/settingsBTN"
+					app:srcCompat="@drawable/ic_action_insight" />
 			</androidx.constraintlayout.widget.ConstraintLayout>
 		</com.google.android.material.appbar.CollapsingToolbarLayout>
 	</com.google.android.material.appbar.AppBarLayout>

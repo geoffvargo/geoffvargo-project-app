@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Owner\AppData\Local\Temp\baseline_settings_24.xml" />
+                                                <entry key="imagePath" value="C:\Users\Owner\AppData\Local\Temp\baseline_playlist_add_check_24.xml" />
                                                 <entry key="opacityPercent" value="80" />
                                               </map>
                                             </option>
@@ -36,7 +36,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/C:/Users/Owner/AppData/Local/JetBrains/Toolbox/apps/AndroidStudio/ch-0/202.7486908/plugins/android/lib/android.jar!/images/material/icons/materialicons/settings/baseline_settings_24.xml" />
+                                                <entry key="url" value="jar:file:/C:/Users/Owner/AppData/Local/JetBrains/Toolbox/apps/AndroidStudio/ch-0/202.7486908/plugins/android/lib/android.jar!/images/material/icons/materialicons/playlist_add_check/baseline_playlist_add_check_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -68,7 +68,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_action_settings" />
+                                      <entry key="outputName" value="ic_action_insight" />
                                       <entry key="theme" value="HOLO_DARK" />
                                     </map>
                                   </option>

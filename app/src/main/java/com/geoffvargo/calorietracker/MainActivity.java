@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 	private FoodItemAdapter adapter;
 	private ArrayAdapter<Meal> mealArrayAdapter;
 	private ImageButton settingsBTN;
+	private ImageButton insightsBTN;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
 		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
 		toolBarLayout.setTitle(getTitle());
 //		setSupportActionBar(findViewById(R.id.toolbar));
+
+		insightsBTN = findViewById(R.id.insightsBTN);
+		insightsBTN.setOnClickListener(c -> {
+			Intent intent = new Intent(MainActivity.this, InsightsActivity.class);
+			startActivity(intent);
+		});
 
 		settingsBTN = findViewById(R.id.settingsBTN);
 		settingsBTN.setOnClickListener(c -> {
