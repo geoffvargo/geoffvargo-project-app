@@ -1,3 +1,4 @@
+/* Geoff Vargo 101908362 */
 package com.geoffvargo.calorietracker;
 
 import android.app.*;

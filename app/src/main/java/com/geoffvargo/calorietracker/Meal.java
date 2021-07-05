@@ -1,3 +1,4 @@
+/* Geoff Vargo 101908362 */
 package com.geoffvargo.calorietracker;
 
 public enum Meal {
