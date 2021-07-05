@@ -4,6 +4,8 @@ import android.content.*;
 import android.view.*;
 import android.widget.*;
 
+import com.google.android.material.switchmaterial.*;
+
 import org.jetbrains.annotations.*;
 
 import java.util.*;
@@ -50,6 +52,11 @@ public class FoodItemAdapter extends RecyclerView.Adapter {
 		fh.getName().setText(curr.getFood_name());
 		fh.getCalories().setText(String.format(Locale.getDefault(), "%d cal", curr.getCalories()));
 		fh.getTime().setText(curr.getTime().toString());
+		fh.getCarbs().setText(String.format(Locale.getDefault(), "%.1f", curr.getCarbs()));
+		fh.getFat().setText(String.format(Locale.getDefault(), "%.1f", curr.getFat()));
+		fh.getProtein().setText(String.format(Locale.getDefault(), "%.1f", curr.getProtein()));
+		fh.getServingNum().setText(String.valueOf(curr.getServings()));
+		fh.getServingSize().setText(String.valueOf(curr.getServing_size()));
 	}
 
 	@Override
@@ -61,14 +68,62 @@ public class FoodItemAdapter extends RecyclerView.Adapter {
 		private TextView name;
 		private TextView calories;
 		private TextView time;
+		private TextView servingNum;
+		private TextView servingSize;
+		private TextView carbs;
+		private TextView fat;
+		private TextView protein;
+		private View details;
+		private SwitchMaterial detailBTN;
 
 		public FoodItemViewHolder(@NotNull View itemView) {
 			super(itemView);
 			this.name = itemView.findViewById(R.id.nameLBL);
 			this.calories = itemView.findViewById(R.id.caloriesLBL);
 			this.time = itemView.findViewById(R.id.timeLBL);
+			this.carbs = itemView.findViewById(R.id.detail_carbsLBL);
+			this.fat = itemView.findViewById(R.id.detail_fatLBL);
+			this.protein = itemView.findViewById(R.id.detail_proteinLBL);
+			this.servingSize = itemView.findViewById(R.id.detail_servingSizeLBL);
+			this.servingNum = itemView.findViewById(R.id.detail_servingNumLBL);
+			this.details = itemView.findViewById(R.id.viewDetailsLAYOUT);
+			this.detailBTN = itemView.findViewById(R.id.detailsBTN);
 
-			itemView.setTag(this);
+			this.detailBTN.setOnCheckedChangeListener((buttonView, c) -> {
+				if (c) {
+					details.setVisibility(View.VISIBLE);
+				} else {
+					details.setVisibility(View.GONE);
+				}
+			});
+		}
+
+		public TextView getServingNum() {
+			return servingNum;
+		}
+
+		public TextView getServingSize() {
+			return servingSize;
+		}
+
+		public TextView getCarbs() {
+			return carbs;
+		}
+
+		public TextView getFat() {
+			return fat;
+		}
+
+		public TextView getProtein() {
+			return protein;
+		}
+
+		public View getDetails() {
+			return details;
+		}
+
+		public SwitchMaterial getDetailBTN() {
+			return detailBTN;
 		}
 
 		public TextView getName() {

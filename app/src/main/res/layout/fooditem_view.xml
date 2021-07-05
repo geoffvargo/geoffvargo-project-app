@@ -10,15 +10,6 @@
                                                    android:fadingEdge="vertical"
                                                    android:padding="16dp">
 	
-	<Button
-		android:id="@+id/editBTN"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_margin="8dp"
-		android:text="@string/editSTR"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/caloriesLBL"
-		tools:ignore="PrivateResource"/>
 	<TextView
 		android:id="@+id/nameLBL"
 		android:layout_width="wrap_content"
@@ -30,15 +21,14 @@
 		android:typeface="normal"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
-		tools:ignore="PrivateResource"/>
+		tools:ignore="PrivateResource" />
 	<TextView
 		android:id="@+id/caloriesLBL"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_margin="8dp"
 		android:text="@string/caloriesPLACEHOLDER"
-		android:textSize="24sp"
 		android:textColor="@android:color/secondary_text_light"
+		android:textSize="24sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 	<TextView
@@ -50,5 +40,122 @@
 		android:textColor="@android:color/secondary_text_light"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/nameLBL"
-		tools:ignore="PrivateResource"/>
+		tools:ignore="PrivateResource" />
+	<Button
+		android:id="@+id/editBTN"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:text="@string/editSTR"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/timeLBL"
+		tools:ignore="PrivateResource" />
+	<com.google.android.material.switchmaterial.SwitchMaterial
+		android:id="@+id/detailsBTN"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="@string/detailsSTR"
+		android:textColor="#000000"
+		android:typeface="normal"
+		app:layout_constraintBottom_toTopOf="@+id/viewDetailsLAYOUT"
+		app:layout_constraintEnd_toEndOf="parent" />
+	<LinearLayout
+		android:id="@+id/viewDetailsLAYOUT"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingTop="8dp"
+		android:paddingBottom="8dp"
+		android:visibility="gone"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/editBTN">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/textView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:text="@string/carbohydrates_in_gramsSTR"
+				android:textColor="@color/black" />
+			<TextView
+				android:id="@+id/detail_carbsLBL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:textColor="@color/black" />
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/textView2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:text="@string/fat_in_gramsSTR"
+				android:textColor="@color/black" />
+			<TextView
+				android:id="@+id/detail_fatLBL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:textColor="@color/black" />
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/textView3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:text="@string/protein_in_gramsSTR"
+				android:textColor="@color/black" />
+			<TextView
+				android:id="@+id/detail_proteinLBL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:textColor="@color/black" />
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:text="@string/serving_size_in_ouncesSTR"
+				android:textColor="@color/black" />
+			<TextView
+				android:id="@+id/detail_servingSizeLBL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:textColor="@color/black" />
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:text="@string/serving_size_in_ouncesSTR"
+				android:textColor="@color/black" />
+			<TextView
+				android:id="@+id/detail_servingNumLBL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:textColor="@color/black" />
+		</LinearLayout>
+	</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

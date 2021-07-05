@@ -47,13 +47,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/EditFoodItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_food_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fooditem_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fooditem_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -466,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625378442900</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Finished creating the class EditFoodItem and its associated layout file; added bunch of project files to Git.">
+      <created>1625426222221</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1625426222221</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,17 +513,18 @@
     <MESSAGE value="Added field for number of servings." />
     <MESSAGE value="Code cleanup." />
     <MESSAGE value="Added Javadocs to the class FoodItemDataSource." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Javadocs to the class FoodItemDataSource." />
+    <MESSAGE value="Finished creating the class EditFoodItem and its associated layout file; added bunch of project files to Git." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished creating the class EditFoodItem and its associated layout file; added bunch of project files to Git." />
   </component>
   <component name="WindowStateProjectService">
     <state x="857" y="356" width="488" height="207" key="#Custom_Plugin_Repositories" timestamp="1625281184883">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="857" y="356" width="488" height="207" key="#Custom_Plugin_Repositories/0.0.1707.920@0.0.1707.920" timestamp="1625281184883" />
-    <state x="195" y="186" width="1338" height="506" key="#PSD" timestamp="1625376558882">
+    <state x="195" y="186" width="1338" height="506" key="#PSD" timestamp="1625437883001">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="195" y="186" width="1338" height="506" key="#PSD/0.0.1707.920@0.0.1707.920" timestamp="1625376558882" />
+    <state x="195" y="186" width="1338" height="506" key="#PSD/0.0.1707.920@0.0.1707.920" timestamp="1625437883001" />
     <state x="447" y="151" key="#Setter_Template" timestamp="1625299148717">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -532,10 +537,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="596" y="262" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1624667727179" />
-    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1625342336567">
+    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1625462688957">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1625342336567" />
+    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1625462688957" />
     <state x="416" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625298033648">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -548,58 +553,58 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="-3" y="213" width="1556" height="493" key="#xdebugger.XInspectDialog/0.0.1707.920@0.0.1707.920" timestamp="1625091153203" />
-    <state x="610" y="163" key="#xdebugger.evaluate" timestamp="1625088521999">
+    <state x="610" y="163" key="#xdebugger.evaluate" timestamp="1625463271309">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="610" y="163" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1625088521999" />
+    <state x="610" y="163" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1625463271309" />
     <state x="94" y="94" width="1519" height="732" key="AVDManager" timestamp="1624765330174">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="94" y="94" width="1519" height="732" key="AVDManager/0.0.1707.920@0.0.1707.920" timestamp="1624765330174" />
-    <state x="435" y="215" key="AndroidCreateResourceFileDialog" timestamp="1625263891021">
+    <state x="435" y="215" key="AndroidCreateResourceFileDialog" timestamp="1625455795349">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="435" y="215" key="AndroidCreateResourceFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1625263891021" />
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625373587688">
+    <state x="435" y="215" key="AndroidCreateResourceFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1625455795349" />
+    <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625462351355">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog/0.0.1707.920@0.0.1707.920" timestamp="1625373587688" />
-    <state x="648" y="207" key="AndroidProcessChooserDialog" timestamp="1625094244115">
+    <state x="700" y="250" key="AndroidCreateXmlResourceDialog/0.0.1707.920@0.0.1707.920" timestamp="1625462351355" />
+    <state x="648" y="207" key="AndroidProcessChooserDialog" timestamp="1625445490546">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="648" y="207" key="AndroidProcessChooserDialog/0.0.1707.920@0.0.1707.920" timestamp="1625094244115" />
+    <state x="648" y="207" key="AndroidProcessChooserDialog/0.0.1707.920@0.0.1707.920" timestamp="1625445490546" />
     <state x="435" y="165" key="AndroidThemeDialog" timestamp="1624676800935">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="165" key="AndroidThemeDialog/0.0.1707.920@0.0.1707.920" timestamp="1624676800935" />
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625378442425">
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625426221646">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625378442425" />
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625426221646" />
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1625278471146">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1625278471146" />
-    <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl" timestamp="1625292373419">
+    <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl" timestamp="1625445920074">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1625292373419" />
-    <state width="1663" height="583" key="GridCell.Tab.0.bottom" timestamp="1625376655280">
+    <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1625445920074" />
+    <state width="1663" height="418" key="GridCell.Tab.0.bottom" timestamp="1625463273320">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625376655280" />
-    <state width="1663" height="583" key="GridCell.Tab.0.center" timestamp="1625376655280">
+    <state width="1663" height="418" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625463273320" />
+    <state width="1663" height="418" key="GridCell.Tab.0.center" timestamp="1625463273320">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625376655280" />
-    <state width="1663" height="583" key="GridCell.Tab.0.left" timestamp="1625376655280">
+    <state width="1663" height="418" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625463273320" />
+    <state width="1663" height="418" key="GridCell.Tab.0.left" timestamp="1625463273320">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625376655280" />
-    <state width="1663" height="583" key="GridCell.Tab.0.right" timestamp="1625376655280">
+    <state width="1663" height="418" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625463273320" />
+    <state width="1663" height="418" key="GridCell.Tab.0.right" timestamp="1625463273320">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625376655280" />
+    <state width="1663" height="418" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625463273320" />
     <state width="1663" height="525" key="GridCell.Tab.1.bottom" timestamp="1624680198205">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -616,30 +621,30 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="1663" height="525" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1624680198205" />
-    <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog" timestamp="1625377550417">
+    <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog" timestamp="1625435972077">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog/0.0.1707.920@0.0.1707.920" timestamp="1625377550417" />
+    <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog/0.0.1707.920@0.0.1707.920" timestamp="1625435972077" />
     <state x="546" y="163" key="RollbackChangesDialog" timestamp="1625423775446">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="546" y="163" key="RollbackChangesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625423775446" />
-    <state x="364" y="105" width="1223" height="709" key="SettingsEditor" timestamp="1625426060227">
+    <state x="364" y="105" width="1223" height="709" key="SettingsEditor" timestamp="1625462006104">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="364" y="105" width="1223" height="709" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625426060227" />
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625378443785">
+    <state x="364" y="105" width="1223" height="709" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625462006104" />
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625426222936">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625378443785" />
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625426222936" />
     <state x="669" y="238" key="chooseDestDirectoryDialog" timestamp="1624647690165">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="669" y="238" key="chooseDestDirectoryDialog/0.0.1707.920@0.0.1707.920" timestamp="1624647690165" />
-    <state x="416" y="189" width="858" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1625302986428">
+    <state x="416" y="189" width="858" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1625463100137">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="416" y="189" width="858" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1707.920@0.0.1707.920" timestamp="1625302986428" />
+    <state x="416" y="189" width="858" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1707.920@0.0.1707.920" timestamp="1625463100137" />
     <state x="344" y="0" width="710" height="876" key="dock-window-1" timestamp="1625423997757">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -652,33 +657,24 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="600" y="355" key="git4idea.ui.GitResetDialog/0.0.1707.920@0.0.1707.920" timestamp="1624677620432" />
-    <state width="695" height="212" key="javadoc.popup.new" timestamp="1625425979623">
+    <state width="643" height="198" key="javadoc.popup.new" timestamp="1625463572921">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="695" height="212" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625425979623" />
+    <state width="643" height="198" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625463572921" />
     <state x="444" y="204" key="psd.add.library.dependency.panel.dimension" timestamp="1625294543129">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="444" y="204" key="psd.add.library.dependency.panel.dimension/0.0.1707.920@0.0.1707.920" timestamp="1625294543129" />
-    <state x="512" y="211" width="672" height="677" key="run.anything.popup" timestamp="1625293402433">
+    <state x="512" y="211" width="672" height="677" key="run.anything.popup" timestamp="1625438172400">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="512" y="211" width="672" height="677" key="run.anything.popup/0.0.1707.920@0.0.1707.920" timestamp="1625293402433" />
+    <state x="512" y="211" width="672" height="677" key="run.anything.popup/0.0.1707.920@0.0.1707.920" timestamp="1625438172400" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/TimeChooser.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" suspend="THREAD" type="CidrExceptionBreakpoint" />
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>

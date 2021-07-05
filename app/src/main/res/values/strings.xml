@@ -15,4 +15,9 @@
 	<string name="service_size_in_ozSTR">Service Size in oz</string>
 	<string name="edit_timeSTR">EDIT TIME</string>
 	<string name="number_of_servingsSTR">Number of Servings</string>
+	<string name="detailsSTR">DETAILS</string>
+	<string name="fat_in_gramsSTR">Fat (in grams):</string>
+	<string name="carbohydrates_in_gramsSTR">Carbohydrates (in grams):</string>
+	<string name="protein_in_gramsSTR">Protein (in grams):</string>
+	<string name="serving_size_in_ouncesSTR">Serving Size (in ounces):</string>
 </resources>
