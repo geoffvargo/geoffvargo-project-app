@@ -20,4 +20,8 @@
 	<string name="carbohydrates_in_gramsSTR">Carbohydrates (in grams):</string>
 	<string name="protein_in_gramsSTR">Protein (in grams):</string>
 	<string name="serving_size_in_ouncesSTR">Serving Size (in ounces):</string>
+	<string name="mealSTR">Meal:</string>
+	<string name="calUnitSTR">" cal"</string>
+	<string name="edit_nameLBL_STR">Name:</string>
+	<string name="deleteSTR">Delete</string>
 </resources>

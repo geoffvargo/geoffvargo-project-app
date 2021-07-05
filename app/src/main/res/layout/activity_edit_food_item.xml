@@ -7,6 +7,17 @@
                                                    android:minWidth="320dp"
                                                    tools:context=".CreateNewFoodItem">
 	
+	<TextView
+		android:id="@+id/edit_nameLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		android:textAlignment="viewStart"
+		android:textSize="18sp"
+		android:text="@string/edit_nameLBL_STR"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
 	<EditText
 		android:id="@+id/edit_foodItemNameINPUT"
 		android:layout_width="0dp"
@@ -15,11 +26,21 @@
 		android:hint="@string/enter_food_name"
 		android:importantForAutofill="no"
 		android:inputType="textPersonName"
-		android:minWidth="128dp"
 		android:padding="8dp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintStart_toEndOf="@id/edit_nameLBL"
 		app:layout_constraintTop_toTopOf="parent" />
+	<TextView
+		android:id="@+id/edit_servingSizeLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		android:text="Serving Size:"
+		android:textAlignment="viewStart"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemNameINPUT" />
 	<EditText
 		android:id="@+id/edit_foodItemServingSizeINPUT"
 		android:layout_width="0dp"
@@ -30,8 +51,19 @@
 		android:inputType="number"
 		android:padding="8dp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/edit_servingSizeLBL"
 		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemNameINPUT" />
+	<TextView
+		android:id="@+id/edit_servingsLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		android:text="Servings:"
+		android:textAlignment="viewStart"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemServingSizeINPUT" />
 	<EditText
 		android:id="@+id/edit_foodItemServingsINPUT"
 		android:layout_width="0dp"
@@ -42,8 +74,19 @@
 		android:hint="@string/number_of_servingsSTR"
 		android:inputType="numberDecimal"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/edit_servingsLBL"
 		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemServingSizeINPUT" />
+	<TextView
+		android:id="@+id/edit_caloriesLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		android:text="Calories:"
+		android:textAlignment="viewStart"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemServingsINPUT" />
 	<EditText
 		android:id="@+id/edit_foodItemCaloriesINPUT"
 		android:layout_width="0dp"
@@ -54,8 +97,19 @@
 		android:inputType="number"
 		android:padding="8dp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/edit_caloriesLBL"
 		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemServingsINPUT" />
+	<TextView
+		android:id="@+id/edit_carbsLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		android:text="Carbohydrates:"
+		android:textAlignment="viewStart"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemCaloriesINPUT" />
 	<EditText
 		android:id="@+id/edit_foodItemCarbsINPUT"
 		android:layout_width="0dp"
@@ -66,8 +120,19 @@
 		android:inputType="number"
 		android:padding="8dp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/edit_carbsLBL"
 		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemCaloriesINPUT" />
+	<TextView
+		android:id="@+id/edit_proteinLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		android:text="Protein:"
+		android:textAlignment="viewStart"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemCarbsINPUT" />
 	<EditText
 		android:id="@+id/edit_foodItemProteinINPUT"
 		android:layout_width="0dp"
@@ -78,8 +143,19 @@
 		android:importantForAutofill="no"
 		android:inputType="number"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/edit_proteinLBL"
 		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemCarbsINPUT" />
+	<TextView
+		android:id="@+id/edit_fatLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="8dp"
+		android:text="Fat:"
+		android:textAlignment="viewStart"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemProteinINPUT" />
 	<EditText
 		android:id="@+id/edit_foodItemFatINPUT"
 		android:layout_width="0dp"
@@ -90,7 +166,7 @@
 		android:importantForAutofill="no"
 		android:inputType="number"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/edit_fatLBL"
 		app:layout_constraintTop_toBottomOf="@+id/edit_foodItemProteinINPUT" />
 	<LinearLayout
 		android:id="@+id/edit_timePickerHSTACK"
@@ -144,6 +220,15 @@
 			android:layout_weight="1"
 			android:padding="8dp"
 			android:text="@string/saveSTR" />
+		<Button
+			android:id="@+id/edit_foodItem_deleteBTN"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_weight="1"
+			android:padding="8dp"
+			android:text="@string/deleteSTR" />
 		<Button
 			android:id="@+id/edit_foodItem_cancelBTN"
 			style="?android:attr/buttonBarButtonStyle"

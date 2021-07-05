@@ -29,6 +29,15 @@
 		android:text="@string/caloriesPLACEHOLDER"
 		android:textColor="@android:color/secondary_text_light"
 		android:textSize="24sp"
+		app:layout_constraintEnd_toStartOf="@+id/calUnitLBL"
+		app:layout_constraintTop_toTopOf="parent" />
+	<TextView
+		android:id="@+id/calUnitLBL"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/calUnitSTR"
+		android:textColor="@android:color/secondary_text_light"
+		android:textSize="24sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 	<TextView
@@ -157,5 +166,30 @@
 				android:layout_margin="8dp"
 				android:textColor="@color/black" />
 		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:text="@string/mealSTR"
+				android:textColor="@color/black" />
+			<TextView
+				android:id="@+id/detail_mealLBL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="8dp"
+				android:textColor="@color/black" />
+		</LinearLayout>
 	</LinearLayout>
+	<TextView
+		android:id="@+id/_id"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		android:text=""
+		tools:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,7 +57,7 @@ class FoodItemDataSource {
 			ContentValues initialValues = new ContentValues();
 
 			initialValues.put("food_name", s.getFood_name());
-			initialValues.put("calorie", s.getCalories());
+			initialValues.put("calories", s.getCalories());
 			initialValues.put("carbs", s.getCarbs());
 			initialValues.put("protein", s.getProtein());
 			initialValues.put("fat", s.getFat());
@@ -108,6 +108,16 @@ class FoodItemDataSource {
 //		} catch (Exception e) {
 //			Log.e("calorieTracker", e.getMessage(), e);
 //		}
+	}
+
+	public boolean deleteItem(FoodItem s) {
+		boolean didDelete = false;
+		try {
+			didDelete = database.delete("food_item", "_id=" + s.get_id(), null) > 0;
+		} catch (Exception e) {
+			Log.e(e.getClass().getCanonicalName(), e.getMessage(), e);
+		}
+		return didDelete;
 	}
 
 	/**

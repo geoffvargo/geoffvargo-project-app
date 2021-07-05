@@ -1,5 +1,6 @@
 package com.geoffvargo.calorietracker;
 
+import android.content.*;
 import android.os.*;
 import android.text.*;
 import android.util.*;
@@ -15,21 +16,30 @@ import androidx.lifecycle.*;
 
 public class EditFoodItem extends AppCompatActivity {
 	private final Calendar callie = Calendar.getInstance();
+	private Intent parentIntent;
+	private int idnum;
 	private TimeViewModel tvm;
 	private Timestamp timestamp;
 	private FoodItem curr;
 	private EditText name;
 	private EditText serving_size;
+	private EditText servings;
 	private EditText calories;
 	private EditText carbs;
 	private EditText protein;
 	private EditText fat;
 	private Button timeBTN;
 	private TextView timeLBL;
+	private TextView idLBL;
 	private Spinner mealChooser;
 	private Button saveBTN;
 	private Button cancelBTN;
+	private Button deleteBTN;
 	private ArrayAdapter<Meal> mealArrayAdapter;
+
+	public EditFoodItem() {
+		parentIntent = getIntent();
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +47,13 @@ public class EditFoodItem extends AppCompatActivity {
 		setContentView(R.layout.activity_edit_food_item);
 		this.setFinishOnTouchOutside(false);
 
+		parentIntent = getIntent();
+		curr = new FoodItem();
+
+		idnum = parentIntent.getIntExtra("_id", -1);
+
 		saveBTN = findViewById(R.id.edit_foodItem_saveBTN);
+		deleteBTN = findViewById(R.id.edit_foodItem_deleteBTN);
 		cancelBTN = findViewById(R.id.edit_foodItem_cancelBTN);
 		timeBTN = findViewById(R.id.edit_timePickerBTN);
 		timeLBL = findViewById(R.id.edit_timePickerLBL);
@@ -65,7 +81,7 @@ public class EditFoodItem extends AppCompatActivity {
 			FoodItemDataSource ds = new FoodItemDataSource(this);
 			try {
 				ds.open();
-				ds.insertItem(curr);
+				ds.updateItem(curr);
 				ds.close();
 			} catch (Exception e) {
 				Log.e(e.getClass().getCanonicalName(), e.getMessage(), e);
@@ -73,19 +89,54 @@ public class EditFoodItem extends AppCompatActivity {
 			finish();
 		});
 
+		deleteBTN.setOnClickListener(c -> {
+			FoodItemDataSource ds = new FoodItemDataSource(this);
+			try {
+				ds.open();
+				ds.deleteItem(curr);
+				ds.close();
+			} catch (Exception e) {
+				Log.e(e.getClass().getCanonicalName(), e.getMessage(), e);
+			}
+			finish();
+		});
+
+		if (idnum != -1) {
+			initTextFields(parentIntent);
+		}
+
 		cancelBTN.setOnClickListener(c -> finish());
-		initTextFields();
-		curr = new FoodItem();
 		initFieldWatchers();
 	}
 
-	private void initTextFields() {
+	private void initTextFields(Intent intent) {
 		name = findViewById(R.id.edit_foodItemNameINPUT);
 		calories = findViewById(R.id.edit_foodItemCaloriesINPUT);
 		serving_size = findViewById(R.id.edit_foodItemServingSizeINPUT);
+		servings = findViewById(R.id.edit_foodItemServingsINPUT);
 		carbs = findViewById(R.id.edit_foodItemCarbsINPUT);
 		protein = findViewById(R.id.edit_foodItemProteinINPUT);
 		fat = findViewById(R.id.edit_foodItemFatINPUT);
+		idLBL = findViewById(R.id._id);
+
+		curr.set_id(idnum);
+		curr.setMeal_name(Meal.valueOf(intent.getStringExtra("meal")));
+		curr.setFood_name(intent.getStringExtra("name"));
+		curr.setCalories(intent.getIntExtra("calories", -1));
+		curr.setServings(intent.getFloatExtra("servings", -1));
+		curr.setServing_size(intent.getFloatExtra("serving_size", -1));
+		curr.setTime(Timestamp.valueOf(intent.getStringExtra("timestamp")));
+		curr.setCarbs(intent.getFloatExtra("carbs", -1));
+		curr.setFat(intent.getFloatExtra("fat", -1));
+		curr.setProtein(intent.getFloatExtra("protein", -1));
+
+		name.setText(curr.getFood_name());
+		calories.setText(String.valueOf(curr.getCalories()));
+		serving_size.setText(String.valueOf(curr.getServing_size()));
+		servings.setText(String.valueOf(curr.getServings()));
+		carbs.setText(String.valueOf(curr.getCarbs()));
+		protein.setText(String.valueOf(curr.getProtein()));
+		fat.setText(String.valueOf(curr.getFat()));
 	}
 
 	private void initFieldWatchers() {
