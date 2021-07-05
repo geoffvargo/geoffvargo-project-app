@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
 	private ArrayAdapter<Meal> mealArrayAdapter;
 
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.app_bar, menu);
+		return true;
+	}
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -34,15 +40,13 @@ public class MainActivity extends AppCompatActivity {
 
 		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
 		toolBarLayout.setTitle(getTitle());
-		setSupportActionBar(findViewById(R.id.toolbar));
+//		setSupportActionBar(findViewById(R.id.toolbar));
 
 		FloatingActionButton fab = findViewById(R.id.newItemBTN);
 		fab.setOnClickListener(fabClick -> {
 			Intent intent = new Intent(MainActivity.this, CreateNewFoodItem.class);
 			startActivity(intent);
 		});
-
-
 	}
 
 	@Override

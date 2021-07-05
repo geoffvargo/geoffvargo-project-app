@@ -5,22 +5,42 @@
                                                      android:layout_height="match_parent"
                                                      android:windowDrawsSystemBarBackgrounds="false"
                                                      android:windowLightNavigationBar="false">
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/bottomContent"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/cardview_dark_background"
+		app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 	<com.google.android.material.appbar.AppBarLayout
 		android:id="@+id/appbar"
 		android:layout_width="match_parent"
-		android:layout_height="122dp">
+		android:layout_height="128dp"
+		android:fitsSystemWindows="true"
+		app:expanded="true">
 		<com.google.android.material.appbar.CollapsingToolbarLayout
 			android:id="@+id/toolbar_layout"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:background="@android:color/holo_blue_dark"
+			android:fitsSystemWindows="true"
 			app:contentScrim="@android:color/holo_blue_dark"
 			app:layout_scrollFlags="scroll|exitUntilCollapsed"
 			app:toolbarId="@+id/toolbar">
-			<androidx.appcompat.widget.Toolbar
+			<androidx.constraintlayout.widget.ConstraintLayout
 				android:id="@+id/toolbar"
 				android:layout_width="match_parent"
-				android:layout_height="?attr/actionBarSize" />
+				android:layout_height="63dp"
+				android:fitsSystemWindows="true">
+				<ImageButton
+					android:id="@+id/imageButton2"
+					style="@android:style/Widget.Material.ImageButton"
+					android:layout_width="54dp"
+					android:layout_height="47dp"
+					android:background="#00FFFFFF"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:srcCompat="@drawable/ic_action_settings" />
+			</androidx.constraintlayout.widget.ConstraintLayout>
 		</com.google.android.material.appbar.CollapsingToolbarLayout>
 	</com.google.android.material.appbar.AppBarLayout>
 	<com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -31,12 +51,8 @@
 		android:contentDescription="@string/todo"
 		android:elevation="32dp"
 		android:src="@drawable/ic_action_name"
+		app:fabSize="normal"
 		app:layout_anchor="@id/appbar"
-		app:layout_anchorGravity="bottom|end" />
-	<androidx.recyclerview.widget.RecyclerView
-		android:id="@+id/bottomContent"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@color/cardview_dark_background"
-		app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+		app:layout_anchorGravity="bottom|end"
+		app:useCompatPadding="true" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

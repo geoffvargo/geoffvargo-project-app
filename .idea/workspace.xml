@@ -47,14 +47,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_action_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/app_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/EditFoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/EditFoodItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_food_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_food_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fooditem_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fooditem_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +108,7 @@
         <option value="Singleton" />
         <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -132,7 +135,7 @@
     <property name="DEBUGGER_ID" value="Java" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Users\Owner\.android\avd\Pixel_2_API_28.avd" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-25T23:59:06.079833800Z" />
-    <property name="ResourceManagerPrefKey.ResourceType" value="STRING" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -149,7 +152,7 @@
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.13454546" />
-    <property name="settings.editor.selected.configurable" value="debugger.stepping" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Signing Configs" />
@@ -481,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625463740397</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Finished implementing UPDATE and DELETE functionalities; all CRUD features have been implemented.">
+      <created>1625481785248</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1625481785248</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +536,8 @@
     <MESSAGE value="Added Javadocs to the class FoodItemDataSource." />
     <MESSAGE value="Finished creating the class EditFoodItem and its associated layout file; added bunch of project files to Git." />
     <MESSAGE value="Added collapsable Details pane to the RecyclerView." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added collapsable Details pane to the RecyclerView." />
+    <MESSAGE value="Finished implementing UPDATE and DELETE functionalities; all CRUD features have been implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished implementing UPDATE and DELETE functionalities; all CRUD features have been implemented." />
   </component>
   <component name="WindowStateProjectService">
     <state x="857" y="356" width="488" height="207" key="#Custom_Plugin_Repositories" timestamp="1625281184883">
@@ -553,10 +564,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="596" y="262" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1624667727179" />
-    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1625475397992">
+    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1625486154386">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1625475397992" />
+    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1625486154386" />
     <state x="416" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625298033648">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -577,10 +588,14 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="94" y="94" width="1519" height="732" key="AVDManager/0.0.1707.920@0.0.1707.920" timestamp="1624765330174" />
-    <state x="435" y="215" key="AndroidCreateResourceFileDialog" timestamp="1625455795349">
+    <state x="435" y="215" key="AndroidCreateResourceDirectoryDialog" timestamp="1625485588881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="435" y="215" key="AndroidCreateResourceFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1625455795349" />
+    <state x="435" y="215" key="AndroidCreateResourceDirectoryDialog/0.0.1707.920@0.0.1707.920" timestamp="1625485588881" />
+    <state x="435" y="215" key="AndroidCreateResourceFileDialog" timestamp="1625485633146">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="435" y="215" key="AndroidCreateResourceFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1625485633146" />
     <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625479552872">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -593,34 +608,34 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="165" key="AndroidThemeDialog/0.0.1707.920@0.0.1707.920" timestamp="1624676800935" />
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625463739556">
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625481784689">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625463739556" />
-    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1625278471146">
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625481784689" />
+    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1625492242606">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1625278471146" />
+    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1625492242606" />
     <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl" timestamp="1625445920074">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1625445920074" />
-    <state width="1663" height="377" key="GridCell.Tab.0.bottom" timestamp="1625481547924">
+    <state width="1227" height="583" key="GridCell.Tab.0.bottom" timestamp="1625495615814">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="377" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625481547924" />
-    <state width="1663" height="377" key="GridCell.Tab.0.center" timestamp="1625481547924">
+    <state width="1227" height="583" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625495615814" />
+    <state width="1227" height="583" key="GridCell.Tab.0.center" timestamp="1625495615814">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="377" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625481547924" />
-    <state width="1663" height="377" key="GridCell.Tab.0.left" timestamp="1625481547924">
+    <state width="1227" height="583" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625495615814" />
+    <state width="1227" height="583" key="GridCell.Tab.0.left" timestamp="1625495615814">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="377" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625481547924" />
-    <state width="1663" height="377" key="GridCell.Tab.0.right" timestamp="1625481547924">
+    <state width="1227" height="583" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625495615814" />
+    <state width="1227" height="583" key="GridCell.Tab.0.right" timestamp="1625495615814">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="377" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625481547924" />
+    <state width="1227" height="583" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625495615814" />
     <state width="1663" height="525" key="GridCell.Tab.1.bottom" timestamp="1624680198205">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -641,18 +656,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog/0.0.1707.920@0.0.1707.920" timestamp="1625475664733" />
-    <state x="546" y="163" key="RollbackChangesDialog" timestamp="1625423775446">
+    <state x="546" y="163" key="RollbackChangesDialog" timestamp="1625492248760">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="546" y="163" key="RollbackChangesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625423775446" />
-    <state x="364" y="105" width="1223" height="709" key="SettingsEditor" timestamp="1625474567778">
+    <state x="546" y="163" key="RollbackChangesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625492248760" />
+    <state x="364" y="105" width="1223" height="709" key="SettingsEditor" timestamp="1625485463899">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="364" y="105" width="1223" height="709" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625474567778" />
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625463742238">
+    <state x="364" y="105" width="1223" height="709" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625485463899" />
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625481788311">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625463742238" />
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625481788311" />
     <state x="669" y="238" key="chooseDestDirectoryDialog" timestamp="1624647690165">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -673,10 +688,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="600" y="355" key="git4idea.ui.GitResetDialog/0.0.1707.920@0.0.1707.920" timestamp="1624677620432" />
-    <state width="843" height="506" key="javadoc.popup.new" timestamp="1625481618811">
+    <state width="843" height="506" key="javadoc.popup.new" timestamp="1625486472878">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="843" height="506" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625481618811" />
+    <state width="843" height="506" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625486472878" />
     <state x="444" y="204" key="psd.add.library.dependency.panel.dimension" timestamp="1625294543129">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
