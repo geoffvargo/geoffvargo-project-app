@@ -40,4 +40,8 @@
 	<string name="attachment_summary_on">Automatically download attachments for incoming emails
 	</string>
 	<string name="attachment_summary_off">Only download attachments when manually requested</string>
+	<string name="sort_bySTR">Sort By:</string>
+	<string name="food_nameSTR">Food Name</string>
+	<string name="caloriesCTR">Calories</string>
+	<string name="carbohydratesSTR">Carbohydrates</string>
 </resources>

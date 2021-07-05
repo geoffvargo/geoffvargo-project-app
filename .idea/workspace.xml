@@ -21,7 +21,7 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="AutoImportSettings">
@@ -47,18 +47,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/SettingsActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/settings_activity.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/sort_fields.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/render.experimental.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/SettingsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/settings_activity.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/root_preferences.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +114,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="InstancesTracker">
+    <option name="classes">
+      <map>
+        <entry key="java.io.File" value="CREATION" />
+      </map>
+    </option>
   </component>
   <component name="ProjectId" id="1uMycZzUuM0V9S0NO5nQBrTOoNr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -504,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625496894186</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Started implementing SettingsActivity.">
+      <created>1625508158858</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1625508158858</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +536,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="LIMIT_HISTORY" value="false" />
-    <MESSAGE value="INITIAL COMMIT" />
     <MESSAGE value="Created MainActivity and layout." />
     <MESSAGE value="Created the class CalorieTrackerDBhelper." />
     <MESSAGE value="Changed the name of the database to &quot;calorieTracker.db&quot;." />
@@ -551,7 +560,8 @@
     <MESSAGE value="Added collapsable Details pane to the RecyclerView." />
     <MESSAGE value="Finished implementing UPDATE and DELETE functionalities; all CRUD features have been implemented." />
     <MESSAGE value="UI tweaks." />
-    <option name="LAST_COMMIT_MESSAGE" value="UI tweaks." />
+    <MESSAGE value="Started implementing SettingsActivity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started implementing SettingsActivity." />
   </component>
   <component name="WindowStateProjectService">
     <state x="857" y="356" width="488" height="207" key="#Custom_Plugin_Repositories" timestamp="1625281184883">
@@ -566,14 +576,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="195" y="186" width="1338" height="506" key="#PSD/0.0.1707.920@0.0.1707.920" timestamp="1625476492143" />
+    <state x="647" y="319" key="#Scopes" timestamp="1625509882007">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="647" y="319" key="#Scopes/0.0.1707.920@0.0.1707.920" timestamp="1625509882007" />
     <state x="447" y="151" key="#Setter_Template" timestamp="1625299148717">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="447" y="151" key="#Setter_Template/0.0.1707.920@0.0.1707.920" timestamp="1625299148717" />
-    <state x="685" y="315" width="761" height="289" key="#com.intellij.debugger.actions.ViewTextAction" timestamp="1625094322828">
+    <state x="685" y="315" width="761" height="289" key="#com.intellij.debugger.actions.ViewTextAction" timestamp="1625509946153">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="685" y="315" width="761" height="289" key="#com.intellij.debugger.actions.ViewTextAction/0.0.1707.920@0.0.1707.920" timestamp="1625094322828" />
+    <state x="685" y="315" width="761" height="289" key="#com.intellij.debugger.actions.ViewTextAction/0.0.1707.920@0.0.1707.920" timestamp="1625509946153" />
     <state x="596" y="262" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624667727179">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -586,18 +600,26 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="416" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1707.920@0.0.1707.920" timestamp="1625298033648" />
+    <state x="585" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625510194701">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="585" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625510194701" />
     <state x="746" y="290" key="#com.intellij.tools.ToolEditorDialog" timestamp="1625282275327">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="746" y="290" key="#com.intellij.tools.ToolEditorDialog/0.0.1707.920@0.0.1707.920" timestamp="1625282275327" />
-    <state x="-3" y="213" width="1556" height="493" key="#xdebugger.XInspectDialog" timestamp="1625091153203">
+    <state x="400" y="215" key="#org.jetbrains.debugger.memory.view.InstancesWindow" timestamp="1625510011416">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="-3" y="213" width="1556" height="493" key="#xdebugger.XInspectDialog/0.0.1707.920@0.0.1707.920" timestamp="1625091153203" />
-    <state x="610" y="163" key="#xdebugger.evaluate" timestamp="1625476394785">
+    <state x="400" y="215" key="#org.jetbrains.debugger.memory.view.InstancesWindow/0.0.1707.920@0.0.1707.920" timestamp="1625510011416" />
+    <state x="-3" y="213" width="1556" height="493" key="#xdebugger.XInspectDialog" timestamp="1625509979471">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="610" y="163" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1625476394785" />
+    <state x="-3" y="213" width="1556" height="493" key="#xdebugger.XInspectDialog/0.0.1707.920@0.0.1707.920" timestamp="1625509979471" />
+    <state x="544" y="250" width="1101" height="593" key="#xdebugger.evaluate" timestamp="1625510023098">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="544" y="250" width="1101" height="593" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1625510023098" />
     <state x="94" y="94" width="1519" height="732" key="AVDManager" timestamp="1624765330174">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -610,10 +632,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="215" key="AndroidCreateResourceFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1625504360916" />
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625479552872">
+    <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625511083200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog/0.0.1707.920@0.0.1707.920" timestamp="1625479552872" />
+    <state x="700" y="250" key="AndroidCreateXmlResourceDialog/0.0.1707.920@0.0.1707.920" timestamp="1625511083200" />
     <state x="648" y="207" key="AndroidProcessChooserDialog" timestamp="1625445490546">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -622,10 +644,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="165" key="AndroidThemeDialog/0.0.1707.920@0.0.1707.920" timestamp="1624676800935" />
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625496893545">
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625508158264">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625496893545" />
+    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625508158264" />
     <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1625504475080">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -634,22 +656,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1625445920074" />
-    <state width="1663" height="583" key="GridCell.Tab.0.bottom" timestamp="1625498151582">
+    <state width="1663" height="377" key="GridCell.Tab.0.bottom" timestamp="1625511119456">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625498151582" />
-    <state width="1663" height="583" key="GridCell.Tab.0.center" timestamp="1625498151582">
+    <state width="1663" height="377" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625511119456" />
+    <state width="1663" height="377" key="GridCell.Tab.0.center" timestamp="1625511119456">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625498151581" />
-    <state width="1663" height="583" key="GridCell.Tab.0.left" timestamp="1625498151581">
+    <state width="1663" height="377" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625511119456" />
+    <state width="1663" height="377" key="GridCell.Tab.0.left" timestamp="1625511119456">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625498151581" />
-    <state width="1663" height="583" key="GridCell.Tab.0.right" timestamp="1625498151582">
+    <state width="1663" height="377" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625511119456" />
+    <state width="1663" height="377" key="GridCell.Tab.0.right" timestamp="1625511119456">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1663" height="583" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625498151582" />
+    <state width="1663" height="377" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625511119456" />
     <state width="1663" height="525" key="GridCell.Tab.1.bottom" timestamp="1624680198205">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -670,18 +692,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog/0.0.1707.920@0.0.1707.920" timestamp="1625503034974" />
-    <state x="546" y="163" key="RollbackChangesDialog" timestamp="1625504477145">
+    <state x="546" y="163" key="RollbackChangesDialog" timestamp="1625509458026">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="546" y="163" key="RollbackChangesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625504477145" />
+    <state x="546" y="163" key="RollbackChangesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625509458026" />
     <state x="364" y="105" width="1223" height="709" key="SettingsEditor" timestamp="1625485463899">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="364" y="105" width="1223" height="709" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625485463899" />
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625496895815">
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625508161164">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625496895815" />
+    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625508161164" />
     <state x="669" y="238" key="chooseDestDirectoryDialog" timestamp="1624647690165">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -702,10 +724,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="600" y="355" key="git4idea.ui.GitResetDialog/0.0.1707.920@0.0.1707.920" timestamp="1624677620432" />
-    <state width="300" height="417" key="javadoc.popup.new" timestamp="1625507766834">
+    <state width="745" height="417" key="javadoc.popup.new" timestamp="1625511271654">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="300" height="417" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625507766834" />
+    <state width="745" height="417" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625511271654" />
     <state x="444" y="204" key="psd.add.library.dependency.panel.dimension" timestamp="1625294543129">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -741,6 +763,11 @@
           <line>53</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="java-exception">
@@ -755,5 +782,10 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="android.app.SharedPreferencesImpl" memberName="mMap" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
