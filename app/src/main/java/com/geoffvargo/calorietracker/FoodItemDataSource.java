@@ -131,7 +131,8 @@ class FoodItemDataSource {
 		ArrayList<FoodItem> items = new ArrayList<>();
 
 		try {
-			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + " " + sortOrder + ";";
+			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + ";";
+//			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + " " + sortOrder + ";";
 			Cursor cursor = database.rawQuery(query, null);
 
 			FoodItem newItem;

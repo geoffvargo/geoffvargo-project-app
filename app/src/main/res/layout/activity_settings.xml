@@ -18,31 +18,50 @@
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintVertical_bias="0.13" />
 	<RadioGroup
+		android:id="@+id/settings_sortByRGRP"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:checkedButton="@id/settings_foodNameRADIO"
+		android:checkedButton="@id/settings_foodNameRB"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/textView4">
 		<RadioButton
-			android:id="@+id/settings_foodNameRADIO"
+			android:id="@+id/settings_foodNameRB"
 			style="@android:style/Widget.Holo.CompoundButton.RadioButton"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/food_nameSTR" />
 		<RadioButton
-			android:id="@+id/settings_caloriesRADIO"
+			android:id="@+id/settings_caloriesRB"
 			style="@android:style/Widget.Holo.CompoundButton.RadioButton"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/caloriesCTR" />
 		<RadioButton
-			android:id="@+id/settings_carbsRADIO"
+			android:id="@+id/settings_carbsRB"
 			style="@android:style/Widget.Holo.CompoundButton.RadioButton"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/carbohydratesSTR" />
-	
-	
+		<RadioButton
+			android:id="@+id/settings_fatRB"
+			style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/fatSTR" />
+		<RadioButton
+			android:id="@+id/settings_proteinRB"
+			style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/proteinSTR" />
 	</RadioGroup>
+	<Button
+		android:id="@+id/settings_doneBTN"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/doneSTR"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

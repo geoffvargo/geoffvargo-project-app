@@ -8,7 +8,9 @@
 	             android:roundIcon="@mipmap/ic_launcher_round"
 	             android:supportsRtl="true"
 	             android:theme="@style/Theme.AppCompat.NoActionBar">
-		<activity android:name=".SettingsActivity"></activity>
+		<activity android:name=".SettingsActivity"
+		          android:excludeFromRecents="true"
+		          android:theme="@style/Theme.AppCompat.Dialog" />
 		<activity android:name=".EditFoodItem"
 		          android:excludeFromRecents="true"
 		          android:theme="@style/Theme.AppCompat.Dialog" />

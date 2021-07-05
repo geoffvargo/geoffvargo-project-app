@@ -66,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
 	protected void onResume() {
 		super.onResume();
 
-		String sortBy    = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortfield", "food_name");
-		String sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
+		String sortBy    = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("field", "food_name");
+//		String sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
 
 		FoodItemDataSource dataSource = new FoodItemDataSource(this);
 
 		try {
 			dataSource.open();
-			foodItems = dataSource.getItems(sortBy, sortOrder);
+			foodItems = dataSource.getItems(sortBy, null);
 			dataSource.close();
 
 			if (foodItems.size() > 0) {
