@@ -123,13 +123,15 @@ class FoodItemDataSource {
 	/**
 	 * Gets items.
 	 *
+	 * @param sortBy
+	 * @param sortOrder
 	 * @return the items
 	 */
-	public ArrayList<FoodItem> getItems() {
+	public ArrayList<FoodItem> getItems(String sortBy, String sortOrder) {
 		ArrayList<FoodItem> items = new ArrayList<>();
 
 		try {
-			String query  = "SELECT * FROM food_item;";
+			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + " " + sortOrder + ";";
 			Cursor cursor = database.rawQuery(query, null);
 
 			FoodItem newItem;

@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<PreferenceCategory app:title="Sort By:">
+		
+		<ListPreference
+			android:id="@+id/sortByLPREF"
+			app:defaultValue="food_name"
+			app:entries="@array/sortfield_entries"
+			app:key="field"
+			app:title="Sort Results According To: "
+			app:useSimpleSummaryProvider="true" />
+<!--		<ListPreference-->
+<!--			app:defaultValue="food_name"-->
+<!--			app:entries="@array/sortfield_entries"-->
+<!--			app:entryValues="@array/sortfield_values"-->
+<!--			app:key="field"-->
+<!--			app:title="Sort Results According To: "-->
+<!--			app:useSimpleSummaryProvider="true" />-->
+
+<!--		<ListPreference-->
+<!--			app:defaultValue="reply"-->
+<!--			app:entries="@array/reply_entries"-->
+<!--			app:entryValues="@array/reply_values"-->
+<!--			app:key="reply"-->
+<!--			app:title="@string/reply_title"-->
+<!--			app:useSimpleSummaryProvider="true" />-->
+	
+	
+	</PreferenceCategory>
+
+</PreferenceScreen>

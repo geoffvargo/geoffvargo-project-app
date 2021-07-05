@@ -12,6 +12,7 @@ import java.sql.*;
 import java.util.*;
 
 import androidx.appcompat.app.*;
+import androidx.core.content.*;
 import androidx.recyclerview.widget.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 	private ArrayList<FoodItem> foodItems = new ArrayList<>();
 	private FoodItemAdapter adapter;
 	private ArrayAdapter<Meal> mealArrayAdapter;
+	private ImageButton settingsBTN;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -31,16 +33,27 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Window w = getWindow();
-//		w.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
 //		View v = findViewById(android.R.id.navigationBarBackground);
 		w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-//		w.setNavigationBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
+		w.setNavigationBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
+//		w.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
 //		w.setStatusBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
+//		w.set(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
+//		w.setFlags();
+//		setwi
+//		w.setStatusBarColor(Color.TRANSPARENT);
 //		v.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+//		w.setStatusBarColor(Color.TRANSPARENT);
 
 		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
 		toolBarLayout.setTitle(getTitle());
 //		setSupportActionBar(findViewById(R.id.toolbar));
+
+		settingsBTN = findViewById(R.id.settingsBTN);
+		settingsBTN.setOnClickListener(c -> {
+			Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+			startActivity(intent);
+		});
 
 		FloatingActionButton fab = findViewById(R.id.newItemBTN);
 		fab.setOnClickListener(fabClick -> {
@@ -53,11 +66,14 @@ public class MainActivity extends AppCompatActivity {
 	protected void onResume() {
 		super.onResume();
 
+		String sortBy    = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortfield", "food_name");
+		String sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
+
 		FoodItemDataSource dataSource = new FoodItemDataSource(this);
 
 		try {
 			dataSource.open();
-			foodItems = dataSource.getItems();
+			foodItems = dataSource.getItems(sortBy, sortOrder);
 			dataSource.close();
 
 			if (foodItems.size() > 0) {
