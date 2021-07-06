@@ -16,6 +16,9 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.*;
 
+/**
+ * This Activity handles the creation of individual FoodItem's.
+ */
 public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 	private TimeViewModel tvm;
 	private final Calendar callie = Calendar.getInstance();

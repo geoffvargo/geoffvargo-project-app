@@ -1,4 +1,5 @@
 /* Geoff Vargo 101908362 */
+
 package com.geoffvargo.calorietracker;
 
 import android.content.*;
@@ -15,6 +16,9 @@ import androidx.appcompat.app.*;
 import androidx.fragment.app.*;
 import androidx.lifecycle.*;
 
+/**
+ * Theis Activity handles both the editing and deletion of individual FoodItem objects.
+ */
 public class EditFoodItem extends AppCompatActivity {
 	private final Calendar callie = Calendar.getInstance();
 	private Intent parentIntent;
@@ -254,15 +258,31 @@ public class EditFoodItem extends AppCompatActivity {
 		});
 	}
 
+	/**
+	 * Show time picker dialog.
+	 *
+	 * @param v
+	 * 		the v
+	 */
 	public void showTimePickerDialog(View v) {
 		DialogFragment newFragment = new TimeChooser();
 		newFragment.show(getSupportFragmentManager(), "timeChooser");
 	}
 
+	/**
+	 * Gets callie.
+	 *
+	 * @return the callie
+	 */
 	public Calendar getCallie() {
 		return callie;
 	}
 
+	/**
+	 * Gets timestamp.
+	 *
+	 * @return the timestamp
+	 */
 	public Timestamp getTimestamp() {
 		return timestamp;
 	}
