@@ -12,6 +12,30 @@
       </filter>
     </filters>
   </component>
+  <component name="AndroidDataSourceStorage">
+    <data-sources>
+      <data-source>
+        <option name="deviceId" value="EMULATOR_Pixel_2_API_28" />
+        <option name="name" value="Android SQLite" />
+        <option name="comment" />
+        <option name="packageName" value="com.geoffvargo.calorietracker" />
+        <option name="databaseName" value="calorieTracker.db" />
+        <classpath-elements>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
+        </classpath-elements>
+      </data-source>
+      <data-source>
+        <option name="deviceId" value="EMULATOR_Pixel_2_API_28" />
+        <option name="name" value="Calorie Tracker Android SQLite" />
+        <option name="comment" />
+        <option name="packageName" value="com.geoffvargo.calorietracker" />
+        <option name="databaseName" value="calorieTracker.db" />
+        <classpath-elements>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
+        </classpath-elements>
+      </data-source>
+    </data-sources>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config>
@@ -47,11 +71,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqlandroid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/CreateNewFoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/CreateNewFoodItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/EditFoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/EditFoodItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_insights.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_insights.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +89,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\Owner\.android\avd\Pixel_2_API_28.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_28]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -112,6 +139,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e66a1fce-090b-480a-9445-519c0d761ded/console.sql" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="InstancesTracker">
     <option name="classes">
       <map>
@@ -146,16 +176,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android-custom-viewC:/Users/Owner/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-viewC:/Users/Owner/AppData/Local/Android/Sdk/sources/android-30/android/widget/EditText.java_SELECTED" value="EditText" />
+    <property name="android.recentlyUsedThemes" value="Theme.AppCompat.NoActionBar" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.sqlite.queryhistory" value="SELECT * FROM food_item;" />
     <property name="com.google.cloudcode.ide_session_index" value="20210625_0000" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.geoffvargo.calorietracker/databases/calorieTracker.db" />
     <property name="memory.settings.postsync.last.time.stamp" value="1624823984982" />
-    <property name="project.structure.last.edited" value="Build Variants" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.13454546" />
-    <property name="settings.editor.selected.configurable" value="emulator" />
+    <property name="project.structure.side.proportion" value="0.5697211" />
+    <property name="settings.editor.selected.configurable" value="android.project.structure" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
   </component>
   <component name="PsdUISettings">
@@ -196,33 +227,6 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -238,7 +242,6 @@
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
-      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -247,31 +250,8 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Java" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
       <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_PROFILING_ENABLED" value="false" />
@@ -294,11 +274,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -315,6 +324,12 @@
       <workItem from="1624597862893" duration="233000" />
       <workItem from="1624598111494" duration="290000" />
       <workItem from="1624598428079" duration="532000" />
+      <workItem from="1625532038447" duration="3277000" />
+      <workItem from="1625535359937" duration="4917000" />
+      <workItem from="1625872919647" duration="67000" />
+      <workItem from="1625873004902" duration="55000" />
+      <workItem from="1625873073708" duration="933000" />
+      <workItem from="1625874054626" duration="6218000" />
     </task>
     <task id="LOCAL-00001" summary="INITIAL COMMIT">
       <created>1624489972029</created>
@@ -547,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625519281262</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="PROJECT SUBMITTED">
+      <created>1625530670270</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1625530670270</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +591,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="LIMIT_HISTORY" value="false" />
-    <MESSAGE value="Fully implemented SQL for the CalorieTrackerDBhelper class." />
     <MESSAGE value="Updated SQL for the CalorieTrackerDBhelper class." />
     <MESSAGE value="Finished creating the 'food_item' table." />
     <MESSAGE value="Renamed class CalorieTrackerDBhelper to FoodItemDBHelper; started creating class FoodItemDataSource." />
@@ -594,193 +615,8 @@
     <MESSAGE value="Finished implementing SettingsActivity: results can now be sorted according to column." />
     <MESSAGE value="Started implementing the InsightsActivity." />
     <MESSAGE value="Added the comment &quot;/* Geoff Vargo 101908362 */&quot; to the top of all the java files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the comment &quot;/* Geoff Vargo 101908362 */&quot; to the top of all the java files." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="857" y="356" width="488" height="207" key="#Custom_Plugin_Repositories" timestamp="1625281184883">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="857" y="356" width="488" height="207" key="#Custom_Plugin_Repositories/0.0.1707.920@0.0.1707.920" timestamp="1625281184883" />
-    <state x="607" y="284" key="#Notifications" timestamp="1625479491893">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="607" y="284" key="#Notifications/0.0.1707.920@0.0.1707.920" timestamp="1625479491893" />
-    <state x="195" y="186" width="1338" height="506" key="#PSD" timestamp="1625525862935">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="195" y="186" width="1338" height="506" key="#PSD/0.0.1707.920@0.0.1707.920" timestamp="1625525862935" />
-    <state x="647" y="319" key="#Scopes" timestamp="1625509882007">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="647" y="319" key="#Scopes/0.0.1707.920@0.0.1707.920" timestamp="1625509882007" />
-    <state x="447" y="151" key="#Setter_Template" timestamp="1625299148717">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="447" y="151" key="#Setter_Template/0.0.1707.920@0.0.1707.920" timestamp="1625299148717" />
-    <state x="685" y="315" width="761" height="289" key="#com.intellij.debugger.actions.ViewTextAction" timestamp="1625514491787">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="685" y="315" width="761" height="289" key="#com.intellij.debugger.actions.ViewTextAction/0.0.1707.920@0.0.1707.920" timestamp="1625514491787" />
-    <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625525843074">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="310" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1625525843074" />
-    <state x="596" y="262" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624667727179">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="596" y="262" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.920@0.0.1707.920" timestamp="1624667727179" />
-    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1625486154386">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="660" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1625486154386" />
-    <state x="416" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625298033648">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="416" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1707.920@0.0.1707.920" timestamp="1625298033648" />
-    <state x="585" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625510194701">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="585" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625510194701" />
-    <state x="746" y="290" key="#com.intellij.tools.ToolEditorDialog" timestamp="1625282275327">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="746" y="290" key="#com.intellij.tools.ToolEditorDialog/0.0.1707.920@0.0.1707.920" timestamp="1625282275327" />
-    <state x="400" y="215" key="#org.jetbrains.debugger.memory.view.InstancesWindow" timestamp="1625510011416">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="400" y="215" key="#org.jetbrains.debugger.memory.view.InstancesWindow/0.0.1707.920@0.0.1707.920" timestamp="1625510011416" />
-    <state x="-3" y="213" width="1556" height="493" key="#xdebugger.XInspectDialog" timestamp="1625509979471">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="-3" y="213" width="1556" height="493" key="#xdebugger.XInspectDialog/0.0.1707.920@0.0.1707.920" timestamp="1625509979471" />
-    <state x="544" y="250" width="1101" height="593" key="#xdebugger.evaluate" timestamp="1625514982950">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="544" y="250" width="1101" height="593" key="#xdebugger.evaluate/0.0.1707.920@0.0.1707.920" timestamp="1625514982950" />
-    <state x="94" y="94" width="1519" height="732" key="AVDManager" timestamp="1624765330174">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="94" y="94" width="1519" height="732" key="AVDManager/0.0.1707.920@0.0.1707.920" timestamp="1624765330174" />
-    <state x="435" y="215" key="AndroidCreateResourceDirectoryDialog" timestamp="1625485588881">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="435" y="215" key="AndroidCreateResourceDirectoryDialog/0.0.1707.920@0.0.1707.920" timestamp="1625485588881" />
-    <state x="435" y="215" key="AndroidCreateResourceFileDialog" timestamp="1625504360916">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="435" y="215" key="AndroidCreateResourceFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1625504360916" />
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog" timestamp="1625518280956">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="700" y="250" key="AndroidCreateXmlResourceDialog/0.0.1707.920@0.0.1707.920" timestamp="1625518280956" />
-    <state x="648" y="207" key="AndroidProcessChooserDialog" timestamp="1625521544733">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="648" y="207" key="AndroidProcessChooserDialog/0.0.1707.920@0.0.1707.920" timestamp="1625521544733" />
-    <state x="435" y="165" key="AndroidThemeDialog" timestamp="1624676800935">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="435" y="165" key="AndroidThemeDialog/0.0.1707.920@0.0.1707.920" timestamp="1624676800935" />
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2" timestamp="1625519280600">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="-4" y="0" width="1631" height="881" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1625519280600" />
-    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog" timestamp="1625517181906">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="94" y="94" width="1519" height="732" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1625517181906" />
-    <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl" timestamp="1625517100561">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="635" y="202" width="802" height="489" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1625517100561" />
-    <state width="1201" height="370" key="GridCell.Tab.0.bottom" timestamp="1625522706912">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1201" height="370" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1625522706912" />
-    <state width="1201" height="370" key="GridCell.Tab.0.center" timestamp="1625522706912">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1201" height="370" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1625522706912" />
-    <state width="1201" height="370" key="GridCell.Tab.0.left" timestamp="1625522706912">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1201" height="370" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1625522706912" />
-    <state width="1201" height="370" key="GridCell.Tab.0.right" timestamp="1625522706912">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1201" height="370" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1625522706912" />
-    <state width="1663" height="525" key="GridCell.Tab.1.bottom" timestamp="1624680198205">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="525" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1624680198205" />
-    <state width="1663" height="525" key="GridCell.Tab.1.center" timestamp="1624680198205">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="525" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1624680198205" />
-    <state width="1663" height="525" key="GridCell.Tab.1.left" timestamp="1624680198205">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="525" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1624680198205" />
-    <state width="1663" height="525" key="GridCell.Tab.1.right" timestamp="1624680198205">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="1663" height="525" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1624680198205" />
-    <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog" timestamp="1625519301012">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="435" y="203" width="1208" height="513" key="IDE.errors.dialog/0.0.1707.920@0.0.1707.920" timestamp="1625519301012" />
-    <state x="546" y="163" key="RollbackChangesDialog" timestamp="1625519458835">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="546" y="163" key="RollbackChangesDialog/0.0.1707.920@0.0.1707.920" timestamp="1625519458835" />
-    <state x="364" y="105" width="1223" height="709" key="SettingsEditor" timestamp="1625520235891">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="364" y="105" width="1223" height="709" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1625520235891" />
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2" timestamp="1625519282299">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="447" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1625519282299" />
-    <state x="669" y="238" key="chooseDestDirectoryDialog" timestamp="1624647690165">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="669" y="238" key="chooseDestDirectoryDialog/0.0.1707.920@0.0.1707.920" timestamp="1624647690165" />
-    <state x="416" y="189" width="858" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1625514460995">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="416" y="189" width="858" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1707.920@0.0.1707.920" timestamp="1625514460995" />
-    <state x="344" y="0" width="710" height="876" key="dock-window-1" timestamp="1625423997757">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="344" y="0" width="710" height="876" key="dock-window-1/0.0.1707.920@0.0.1707.920" timestamp="1625423997757" />
-    <state x="571" y="304" key="edit.logcat.filter.dialog.dimensions" timestamp="1625090942588">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="571" y="304" key="edit.logcat.filter.dialog.dimensions/0.0.1707.920@0.0.1707.920" timestamp="1625090942588" />
-    <state x="600" y="355" key="git4idea.ui.GitResetDialog" timestamp="1624677620432">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="600" y="355" key="git4idea.ui.GitResetDialog/0.0.1707.920@0.0.1707.920" timestamp="1624677620432" />
-    <state width="300" height="331" key="javadoc.popup.new" timestamp="1625518417034">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="300" height="331" key="javadoc.popup.new/0.0.1707.920@0.0.1707.920" timestamp="1625518417034" />
-    <state x="444" y="204" key="psd.add.library.dependency.panel.dimension" timestamp="1625294543129">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="444" y="204" key="psd.add.library.dependency.panel.dimension/0.0.1707.920@0.0.1707.920" timestamp="1625294543129" />
-    <state x="556" y="208" key="refactoring.ChangeSignatureDialog" timestamp="1625500345034">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="556" y="208" key="refactoring.ChangeSignatureDialog/0.0.1707.920@0.0.1707.920" timestamp="1625500345034" />
-    <state x="512" y="211" width="672" height="677" key="run.anything.popup" timestamp="1625438172400">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="512" y="211" width="672" height="677" key="run.anything.popup/0.0.1707.920@0.0.1707.920" timestamp="1625438172400" />
-    <state x="516" y="196" width="672" height="678" key="search.everywhere.popup" timestamp="1625528610218">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="516" y="196" width="672" height="678" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1625528610218" />
+    <MESSAGE value="PROJECT SUBMITTED" />
+    <option name="LAST_COMMIT_MESSAGE" value="PROJECT SUBMITTED" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -827,11 +663,6 @@
             <option name="NOTIFY_CAUGHT" value="false" />
           </properties>
         </breakpoint>
-        <breakpoint enabled="true" log-message="true" log-stack="true" suspend="THREAD" type="CidrExceptionBreakpoint">
-          <properties caught="ANY_EXCEPTION">
-            <option name="whenCaught" value="ANY_EXCEPTION" />
-          </properties>
-        </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -839,5 +670,9 @@
         <PinnedItemInfo parentTag="android.app.SharedPreferencesImpl" memberName="mMap" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                     android:layout_width="match_parent"
-                                                     android:layout_height="match_parent"
-                                                     android:fitsSystemWindows="true"
-                                                     android:windowDrawsSystemBarBackgrounds="true"
-                                                     android:windowLightNavigationBar="false">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:fitsSystemWindows="true"
+>
+	<com.google.android.material.bottomnavigation.BottomNavigationView
+		android:id="@+id/bottomNavigationView"
+		android:layout_width="match_parent" android:layout_height="128dp"
+		android:background="@android:color/holo_blue_dark" app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
 	<androidx.recyclerview.widget.RecyclerView
 		android:id="@+id/bottomContent"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:background="@color/cardview_dark_background"
-		app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+		app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
 	<com.google.android.material.appbar.AppBarLayout
 		android:id="@+id/appbar"
 		android:layout_width="match_parent"
 		android:layout_height="128dp"
 		android:fitsSystemWindows="true"
-		app:expanded="true">
+		app:expanded="true" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
 		<com.google.android.material.appbar.CollapsingToolbarLayout
 			android:id="@+id/toolbar_layout"
 			android:layout_width="match_parent"
@@ -40,7 +44,7 @@
 					android:background="#00FFFFFF"
 					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintEnd_toEndOf="parent"
-					app:srcCompat="@drawable/ic_action_settings" />
+					app:srcCompat="@drawable/ic_action_settings"/>
 				<ImageButton
 					android:id="@+id/insightsBTN"
 					android:layout_width="54dp"
@@ -48,7 +52,7 @@
 					android:background="#00FFFFFF"
 					app:layout_constraintBottom_toBottomOf="parent"
 					app:layout_constraintEnd_toStartOf="@+id/settingsBTN"
-					app:srcCompat="@drawable/ic_action_insight" />
+					app:srcCompat="@drawable/ic_action_insight"/>
 			</androidx.constraintlayout.widget.ConstraintLayout>
 		</com.google.android.material.appbar.CollapsingToolbarLayout>
 	</com.google.android.material.appbar.AppBarLayout>
@@ -61,7 +65,6 @@
 		android:elevation="32dp"
 		android:src="@drawable/ic_action_name"
 		app:fabSize="normal"
-		app:layout_anchor="@id/appbar"
-		app:layout_anchorGravity="bottom|end"
-		app:useCompatPadding="true" />
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+		app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/appbar"
+		app:useCompatPadding="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
