@@ -71,14 +71,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqlandroid.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_content.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/app_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/app_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,19 +127,16 @@
       <list>
         <option value="Enum" />
         <option value="Singleton" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="resourceFile" />
         <option value="valueResourceFile" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e66a1fce-090b-480a-9445-519c0d761ded/console.sql" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="InstancesTracker">
     <option name="classes">
@@ -160,6 +156,7 @@
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -168,7 +165,7 @@
     <property name="DEBUGGER_ID" value="Java" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Users\Owner\.android\avd\Pixel_2_API_28.avd" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-25T23:59:06.079833800Z" />
-    <property name="ResourceManagerPrefKey.ResourceType" value="ARRAY" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="COLOR" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -186,7 +183,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.5697211" />
-    <property name="settings.editor.selected.configurable" value="android.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
   </component>
   <component name="PsdUISettings">
@@ -196,19 +193,19 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.173111823">
+    <key name="android.template.167617798">
       <recent name="com.geoffvargo.calorietracker" />
     </key>
-    <key name="android.template.-1180457010">
+    <key name="android.template.173111823">
       <recent name="com.geoffvargo.calorietracker" />
     </key>
     <key name="android.template.-91917246">
       <recent name="com.geoffvargo.calorietracker" />
     </key>
-    <key name="android.template.615509901">
+    <key name="android.template.-1180457010">
       <recent name="com.geoffvargo.calorietracker" />
     </key>
-    <key name="android.template.167617798">
+    <key name="android.template.615509901">
       <recent name="com.geoffvargo.calorietracker" />
     </key>
   </component>
@@ -330,6 +327,9 @@
       <workItem from="1625873004902" duration="55000" />
       <workItem from="1625873073708" duration="933000" />
       <workItem from="1625874054626" duration="6218000" />
+      <workItem from="1626071691907" duration="2249000" />
+      <workItem from="1626154064369" duration="7211000" />
+      <workItem from="1626214234447" duration="10770000" />
     </task>
     <task id="LOCAL-00001" summary="INITIAL COMMIT">
       <created>1624489972029</created>
@@ -641,20 +641,20 @@
           <line>136</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java</url>
-          <line>121</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+        <line-breakpoint suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java</url>
           <line>131</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+        <line-breakpoint suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/SettingsActivity.java</url>
           <line>52</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemAdapter.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

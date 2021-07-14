@@ -1,70 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:fitsSystemWindows="true"
->
-	<com.google.android.material.bottomnavigation.BottomNavigationView
-		android:id="@+id/bottomNavigationView"
-		android:layout_width="match_parent" android:layout_height="128dp"
-		android:background="@android:color/holo_blue_dark" app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
-	<androidx.recyclerview.widget.RecyclerView
-		android:id="@+id/bottomContent"
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:id="@+id/coordinatorLayout"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@color/cardview_dark_background"
-		app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
-	<com.google.android.material.appbar.AppBarLayout
-		android:id="@+id/appbar"
-		android:layout_width="match_parent"
-		android:layout_height="128dp"
-		android:fitsSystemWindows="true"
-		app:expanded="true" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
-		<com.google.android.material.appbar.CollapsingToolbarLayout
-			android:id="@+id/toolbar_layout"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:background="@android:color/holo_blue_dark"
-			android:fitsSystemWindows="true"
-			app:contentScrim="@android:color/holo_blue_dark"
-			app:layout_scrollFlags="scroll|exitUntilCollapsed"
-			app:toolbarId="@+id/toolbar">
-			<androidx.constraintlayout.widget.ConstraintLayout
-				android:id="@+id/toolbar"
-				android:layout_width="match_parent"
-				android:layout_height="63dp"
-				android:fitsSystemWindows="true">
-				<ImageButton
-					android:id="@+id/settingsBTN"
-					style="@android:style/Widget.Material.ImageButton"
-					android:layout_width="54dp"
-					android:layout_height="47dp"
-					android:background="#00FFFFFF"
-					app:layout_constraintBottom_toBottomOf="parent"
-					app:layout_constraintEnd_toEndOf="parent"
-					app:srcCompat="@drawable/ic_action_settings"/>
-				<ImageButton
-					android:id="@+id/insightsBTN"
-					android:layout_width="54dp"
-					android:layout_height="47dp"
-					android:background="#00FFFFFF"
-					app:layout_constraintBottom_toBottomOf="parent"
-					app:layout_constraintEnd_toStartOf="@+id/settingsBTN"
-					app:srcCompat="@drawable/ic_action_insight"/>
-			</androidx.constraintlayout.widget.ConstraintLayout>
-		</com.google.android.material.appbar.CollapsingToolbarLayout>
-	</com.google.android.material.appbar.AppBarLayout>
-	<com.google.android.material.floatingactionbutton.FloatingActionButton
-		android:id="@+id/newItemBTN"
-		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_margin="16dp"
-		android:contentDescription="@string/todo"
-		android:elevation="32dp"
-		android:src="@drawable/ic_action_name"
-		app:fabSize="normal"
-		app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/appbar"
-		app:useCompatPadding="true"/>
+		android:fitsSystemWindows="true"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		>
+		<!--		tools:context=".ScrollingActivity">-->
+		
+		<com.google.android.material.appbar.AppBarLayout
+			android:id="@+id/app_bar"
+			android:layout_width="match_parent"
+			android:layout_height="164dp"
+			android:fitsSystemWindows="true"
+			>
+			
+			<com.google.android.material.appbar.CollapsingToolbarLayout
+				android:id="@+id/toolbar_layout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:alpha="1.0"
+				android:background="@color/holo_blue_dark"
+				android:elevation="16dp"
+				android:fitsSystemWindows="true"
+				app:contentScrim="@color/holo_blue_dark"
+				app:layout_scrollFlags="scroll|exitUntilCollapsed"
+				app:toolbarId="@+id/toolbar">
+				
+				<!--				<androidx.appcompat.widget.Toolbar-->
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/toolbar"
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					android:layout_marginTop="16dp"
+					android:background="@color/holo_blue_dark"
+					app:layout_collapseMode="pin">
+					<ImageButton
+						android:id="@+id/imageButton"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_margin="@dimen/fab_margin"
+						android:background="@android:color/transparent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						app:srcCompat="@drawable/ic_action_settings"/>
+				</androidx.constraintlayout.widget.ConstraintLayout>
+			
+			</com.google.android.material.appbar.CollapsingToolbarLayout>
+		</com.google.android.material.appbar.AppBarLayout>
+		
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:id="@+id/newItemBTN"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/fab_margin"
+			app:layout_anchor="@id/app_bar"
+			app:layout_anchorGravity="bottom|end"
+			app:srcCompat="@drawable/ic_action_name"
+			android:contentDescription="@string/todoSTR"/>
+		
+		<include layout="@layout/bottom_content"/>
+	
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+	<com.google.android.material.bottomnavigation.BottomNavigationView
+		android:layout_width="0dp"
+		android:layout_height="96dp"
+		android:background="@color/holo_blue_dark"
+		android:fitsSystemWindows="true"
+		app:itemBackground="@color/holo_blue_dark"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+		<!--		<Button-->
+		<!--			android:id="@+id/button"-->
+		<!--			android:layout_width="wrap_content"-->
+		<!--			android:layout_height="wrap_content"-->
+		<!--			android:text="Button"/>-->
+	</com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+	
+	<!--<?xml version="1.0" encoding="utf-8"?>-->
+	<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+	<!--	xmlns:app="http://schemas.android.com/apk/res-auto"-->
+	<!--	xmlns:tools="http://schemas.android.com/tools"-->
+	<!--	android:layout_height="match_parent"-->
+	<!--	android:layout_width="match_parent"-->
+	<!--	xmlns:android="http://schemas.android.com/apk/res/android">-->
+	<!--	-->
+	<!--	<androidx.coordinatorlayout.widget.CoordinatorLayout-->
+	<!--		android:id="@+id/coordinatorLayout"-->
+	<!--		android:layout_width="match_parent"-->
+	<!--		android:layout_height="wrap_content"-->
+	<!--		android:fitsSystemWindows="true"-->
+	<!--		app:layout_constraintEnd_toEndOf="parent"-->
+	<!--		app:layout_constraintStart_toStartOf="parent"-->
+	<!--		app:layout_constraintTop_toTopOf="parent"-->
+	<!--		tools:context=".MainActivity">-->
+	<!--		<com.google.android.material.appbar.AppBarLayout-->
+	<!--			android:id="@+id/appbar"-->
+	<!--			android:layout_width="match_parent"-->
+	<!--			android:layout_height="180dp"-->
+	<!--			android:fitsSystemWindows="true">-->
+	<!--			<com.google.android.material.appbar.CollapsingToolbarLayout-->
+	<!--				android:id="@+id/toolbar_layout"-->
+	<!--				android:layout_width="match_parent"-->
+	<!--				android:layout_height="match_parent"-->
+	<!--				android:fitsSystemWindows="true"-->
+	<!--				app:contentScrim="@android:color/holo_blue_dark"-->
+	<!--				app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+	<!--				app:toolbarId="@+id/toolbar">-->
+	<!--				<androidx.appcompat.widget.Toolbar-->
+	<!--					android:id="@+id/toolbar"-->
+	<!--					android:layout_width="match_parent"-->
+	<!--					android:layout_height="?attr/actionBarSize"-->
+	<!--					app:layout_collapseMode="pin"/>-->
+	<!--				&lt;!&ndash;					<ImageButton&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:id="@+id/settingsBTN"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						style="@android:style/Widget.Material.ImageButton"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:layout_width="54dp"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:layout_height="47dp"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:background="#00FFFFFF"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						app:srcCompat="@drawable/ic_action_settings"/>&ndash;&gt;-->
+	<!--				&lt;!&ndash;					<ImageButton&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:id="@+id/insightsBTN"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:layout_width="54dp"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:layout_height="47dp"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						android:background="#00FFFFFF"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						app:layout_constraintEnd_toStartOf="@+id/settingsBTN"&ndash;&gt;-->
+	<!--				&lt;!&ndash;						app:srcCompat="@drawable/ic_action_insight"/>&ndash;&gt;-->
+	<!--				&lt;!&ndash;				</androidx.appcompat.widget.Toolbar>&ndash;&gt;-->
+	<!--			</com.google.android.material.appbar.CollapsingToolbarLayout>-->
+	<!--		</com.google.android.material.appbar.AppBarLayout>-->
+	<!--		<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+	<!--			android:id="@+id/newItemBTN"-->
+	<!--			android:layout_width="wrap_content"-->
+	<!--			android:layout_height="wrap_content"-->
+	<!--			android:layout_margin="@dimen/fab_margin"-->
+	<!--			app:layout_anchor="@id/appbar"-->
+	<!--			app:layout_anchorGravity="bottom|end"-->
+	<!--			app:useCompatPadding="true"/>-->
+	<!--		<include-->
+	<!--			layout="@layout/bottom_content"/>-->
+	<!--	</androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+	<!--	<com.google.android.material.bottomnavigation.BottomNavigationView-->
+	<!--		android:id="@+id/bottomNavigationView"-->
+	<!--		android:layout_width="match_parent"-->
+	<!--		android:layout_height="96dp"-->
+	<!--		app:itemBackground="@android:color/holo_blue_dark"-->
+	<!--		app:layout_constraintBottom_toBottomOf="parent"-->
+	<!--		app:layout_constraintEnd_toEndOf="parent"-->
+	<!--		app:layout_constraintStart_toStartOf="parent"/>-->
+	<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

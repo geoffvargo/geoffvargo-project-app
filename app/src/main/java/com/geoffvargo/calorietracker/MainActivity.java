@@ -9,7 +9,6 @@ import android.widget.*;
 import com.google.android.material.appbar.*;
 import com.google.android.material.floatingactionbutton.*;
 
-import java.sql.*;
 import java.util.*;
 
 import androidx.appcompat.app.*;
@@ -69,33 +68,24 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Window w = getWindow();
-//		View v = findViewById(android.R.id.navigationBarBackground);
 		w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 		w.setNavigationBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
-//		w.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-//		w.setStatusBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
-//		w.set(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
-//		w.setFlags();
-//		setwi
-//		w.setStatusBarColor(Color.TRANSPARENT);
-//		v.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-//		w.setStatusBarColor(Color.TRANSPARENT);
 
 		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
 		toolBarLayout.setTitle(getTitle());
 //		setSupportActionBar(findViewById(R.id.toolbar));
 
-		insightsBTN = findViewById(R.id.insightsBTN);
-		insightsBTN.setOnClickListener(c -> {
-			Intent intent = new Intent(MainActivity.this, InsightsActivity.class);
-			startActivity(intent);
-		});
+//		insightsBTN = findViewById(R.id.insightsBTN);
+//		insightsBTN.setOnClickListener(c -> {
+//			Intent intent = new Intent(MainActivity.this, InsightsActivity.class);
+//			startActivity(intent);
+//		});
 
-		settingsBTN = findViewById(R.id.settingsBTN);
-		settingsBTN.setOnClickListener(c -> {
-			Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-			startActivity(intent);
-		});
+//		settingsBTN = findViewById(R.id.settingsBTN);
+//		settingsBTN.setOnClickListener(c -> {
+//			Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+//			startActivity(intent);
+//		});
 
 		FloatingActionButton fab = findViewById(R.id.newItemBTN);
 		fab.setOnClickListener(fabClick -> {
@@ -112,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 		super.onResume();
 
 		String sortBy    = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("field", "food_name");
-//		String sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
+////		String sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
 
 		FoodItemDataSource dataSource = new FoodItemDataSource(this);
 
@@ -131,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 				Intent intent = new Intent(MainActivity.this, CreateNewFoodItem.class);
 				startActivity(intent);
 			}
-		} catch (SQLException throwables) {
+		} catch (Exception throwables) {
 			Toast.makeText(this, "Error retrieving list.", Toast.LENGTH_LONG).show();
 		}
 	}
