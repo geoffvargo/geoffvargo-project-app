@@ -1,4 +1,5 @@
 /* Geoff Vargo 101908362 */
+
 package com.geoffvargo.calorietracker;
 
 import java.sql.*;
@@ -11,7 +12,7 @@ public class FoodItem {
 	private String food_name;
 	private float servings;
 	private float serving_size;
-	private Timestamp time;
+	private Timestamp time = new Timestamp(System.currentTimeMillis());
 	private int calories;
 	private float carbs;
 	private float protein;
@@ -23,36 +24,11 @@ public class FoodItem {
 		this.meal_name = Meal.NONE;
 	}
 
-	/**
-	 * Instantiates a new Food item.
-	 *
-	 * @param _id
-	 * 		the id
-	 * @param food_name
-	 * 		the food name
-	 * @param servings
-	 * 		the servings
-	 * @param serving_size
-	 * 		the serving size
-	 * @param time
-	 * 		the time
-	 * @param calories
-	 * 		the calories
-	 * @param carbs
-	 * 		the carbs
-	 * @param protein
-	 * 		the protein
-	 * @param fat
-	 * 		the fat
-	 * @param meal_name
-	 * 		the meal name
-	 */
-	public FoodItem(int _id, String food_name, float servings, float serving_size, Timestamp time, int calories, float carbs, float protein, float fat, Meal meal_name) {
+	public FoodItem(int _id, String food_name, float servings, float serving_size, int calories, float carbs, float protein, float fat, Meal meal_name) {
 		this._id = _id;
 		this.food_name = food_name;
 		this.servings = servings;
 		this.serving_size = serving_size;
-		this.time = time;
 		this.calories = calories;
 		this.carbs = carbs;
 		this.protein = protein;

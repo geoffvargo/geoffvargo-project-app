@@ -55,6 +55,42 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/proteinSTR" />
+		<RadioButton
+			android:id="@+id/settings_timestampRB"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/timestampRB_STR"/>
+	</RadioGroup>
+	<TextView
+		android:id="@+id/textView6"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Sort Order: "
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.23"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/settings_sortByRGRP"/>
+	<RadioGroup
+		android:id="@+id/settings_sortOrderRGRP"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toTopOf="@+id/settings_doneBTN"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView6"
+		app:layout_constraintVertical_bias="0.0">
+		<RadioButton
+			android:id="@+id/settings_ascendingRB"
+			style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/ascendingDB_STR"/>
+		<RadioButton
+			android:id="@+id/settings_descendingRB"
+			style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/descendingRB_STR"/>
 	</RadioGroup>
 	<Button
 		android:id="@+id/settings_doneBTN"
@@ -63,5 +99,6 @@
 		android:text="@string/doneSTR"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		app:layout_constraintStart_toStartOf="parent"
+		/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,5 @@
 /* Geoff Vargo 101908362 */
+
 package com.geoffvargo.calorietracker;
 
 import android.content.*;
@@ -16,6 +17,8 @@ import java.util.*;
 class FoodItemDataSource {
 	private SQLiteDatabase database;
 	private FoodItemDBHelper dbHelper;
+
+	// TODO: 7/23/2021 fix problem with saving all nutrient info properly (specifically the 'Fat' column)
 
 	/**
 	 * Instantiates a new Food item data source.
@@ -132,8 +135,8 @@ class FoodItemDataSource {
 		ArrayList<FoodItem> items = new ArrayList<>();
 
 		try {
-			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + ";";
-//			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + " " + sortOrder + ";";
+//			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + ";";
+			String query  = "SELECT * FROM food_item ORDER BY " + sortBy + " " + sortOrder + ";";
 			Cursor cursor = database.rawQuery(query, null);
 
 			FoodItem newItem;

@@ -49,4 +49,9 @@
 	<string name="doneSTR">DONE</string>
 	<string name="exitSTR">EXIT</string>
 	<string name="todoSTR">TODO</string>
+	<string name="settingsBTN_STR">Settings</string>
+	<string name="ascendingDB_STR">Ascending</string>
+	<string name="descendingRB_STR">Descending</string>
+	<string name="timestampRB_STR">Date and Time</string>
+	<string name="serving_numberLBL_STR">"Number of Servings: "</string>
 </resources>

@@ -1,4 +1,5 @@
 /* Geoff Vargo 101908362 */
+
 package com.geoffvargo.calorietracker;
 
 import android.content.*;
@@ -15,54 +16,22 @@ import androidx.appcompat.app.*;
 import androidx.core.content.*;
 import androidx.recyclerview.widget.*;
 
-/**
- * The type Main activity.
- */
 public class MainActivity extends AppCompatActivity {
-	/**
-	 * The Food item view.
-	 */
 	private RecyclerView foodItemView;
-	/**
-	 * The Food items.
-	 */
 	private ArrayList<FoodItem> foodItems = new ArrayList<>();
-	/**
-	 * The Adapter.
-	 */
 	private FoodItemAdapter adapter;
-	/**
-	 * The Meal array adapter.
-	 */
 	private ArrayAdapter<Meal> mealArrayAdapter;
-	/**
-	 * The Settings btn.
-	 */
 	private ImageButton settingsBTN;
-	/**
-	 * The Insights btn.
-	 */
 	private ImageButton insightsBTN;
+	private String sortBy;
+	private String sortOrder;
 
-	/**
-	 * On create options menu boolean.
-	 *
-	 * @param menu
-	 * 		the menu
-	 * @return the boolean
-	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.app_bar, menu);
 		return true;
 	}
 
-	/**
-	 * On create.
-	 *
-	 * @param savedInstanceState
-	 * 		the saved instance state
-	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
 		toolBarLayout.setTitle(getTitle());
+
 //		setSupportActionBar(findViewById(R.id.toolbar));
 
 //		insightsBTN = findViewById(R.id.insightsBTN);
@@ -81,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
 //			startActivity(intent);
 //		});
 
-//		settingsBTN = findViewById(R.id.settingsBTN);
-//		settingsBTN.setOnClickListener(c -> {
-//			Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-//			startActivity(intent);
-//		});
+		settingsBTN = findViewById(R.id.settingsBTN);
+		settingsBTN.setOnClickListener(c -> {
+			Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+			startActivity(intent);
+		});
 
 		FloatingActionButton fab = findViewById(R.id.newItemBTN);
 		fab.setOnClickListener(fabClick -> {
@@ -94,21 +64,18 @@ public class MainActivity extends AppCompatActivity {
 		});
 	}
 
-	/**
-	 * On resume.
-	 */
 	@Override
 	protected void onResume() {
 		super.onResume();
 
-		String sortBy    = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("field", "food_name");
-////		String sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
+		sortBy = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("field", "food_name");
+		sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
 
 		FoodItemDataSource dataSource = new FoodItemDataSource(this);
 
 		try {
 			dataSource.open();
-			foodItems = dataSource.getItems(sortBy, null);
+			foodItems = dataSource.getItems(sortBy, sortOrder);
 			dataSource.close();
 
 			if (foodItems.size() > 0) {
@@ -126,21 +93,10 @@ public class MainActivity extends AppCompatActivity {
 		}
 	}
 
-	/**
-	 * Gets food items.
-	 *
-	 * @return the food items
-	 */
 	public ArrayList<FoodItem> getFoodItems() {
 		return foodItems;
 	}
 
-	/**
-	 * Sets food items.
-	 *
-	 * @param foodItems
-	 * 		the food items
-	 */
 	public void setFoodItems(ArrayList<FoodItem> foodItems) {
 		this.foodItems = foodItems;
 	}

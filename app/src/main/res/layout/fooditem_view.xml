@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="wrap_content"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_margin="16dp"
-                                                   android:background="@color/cardview_light_background"
-                                                   android:elevation="16dp"
-                                                   android:fadingEdge="vertical"
-                                                   android:padding="16dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_margin="16dp"
+	android:background="@color/cardview_light_background"
+	android:elevation="16dp"
+	android:fadingEdge="vertical"
+	android:padding="16dp">
 	
 	<TextView
 		android:id="@+id/nameLBL"
@@ -21,7 +22,7 @@
 		android:typeface="normal"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
-		tools:ignore="PrivateResource" />
+		tools:ignore="PrivateResource"/>
 	<TextView
 		android:id="@+id/caloriesLBL"
 		android:layout_width="wrap_content"
@@ -30,7 +31,7 @@
 		android:textColor="@android:color/secondary_text_light"
 		android:textSize="24sp"
 		app:layout_constraintEnd_toStartOf="@+id/calUnitLBL"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toTopOf="parent"/>
 	<TextView
 		android:id="@+id/calUnitLBL"
 		android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
 		android:textColor="@android:color/secondary_text_light"
 		android:textSize="24sp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toTopOf="parent"/>
 	<TextView
 		android:id="@+id/timeLBL"
 		android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
 		android:textColor="@android:color/secondary_text_light"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/nameLBL"
-		tools:ignore="PrivateResource" />
+		tools:ignore="PrivateResource"/>
 	<Button
 		android:id="@+id/editBTN"
 		android:layout_width="wrap_content"
@@ -58,7 +59,7 @@
 		android:text="@string/editSTR"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/timeLBL"
-		tools:ignore="PrivateResource" />
+		tools:ignore="PrivateResource"/>
 	<com.google.android.material.switchmaterial.SwitchMaterial
 		android:id="@+id/detailsBTN"
 		android:layout_width="0dp"
@@ -67,7 +68,7 @@
 		android:textColor="#000000"
 		android:typeface="normal"
 		app:layout_constraintBottom_toTopOf="@+id/viewDetailsLAYOUT"
-		app:layout_constraintEnd_toEndOf="parent" />
+		app:layout_constraintEnd_toEndOf="parent"/>
 	<LinearLayout
 		android:id="@+id/viewDetailsLAYOUT"
 		android:layout_width="match_parent"
@@ -88,13 +89,13 @@
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
 				android:text="@string/carbohydrates_in_gramsSTR"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 			<TextView
 				android:id="@+id/detail_carbsLBL"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 		</LinearLayout>
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -106,13 +107,13 @@
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
 				android:text="@string/fat_in_gramsSTR"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 			<TextView
 				android:id="@+id/detail_fatLBL"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 		</LinearLayout>
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -124,13 +125,13 @@
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
 				android:text="@string/protein_in_gramsSTR"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 			<TextView
 				android:id="@+id/detail_proteinLBL"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 		</LinearLayout>
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -141,13 +142,13 @@
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
 				android:text="@string/serving_size_in_ouncesSTR"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 			<TextView
 				android:id="@+id/detail_servingSizeLBL"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 		</LinearLayout>
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -157,14 +158,14 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
-				android:text="@string/serving_size_in_ouncesSTR"
-				android:textColor="@color/black" />
+				android:text="@string/serving_numberLBL_STR"
+				android:textColor="@color/black"/>
 			<TextView
 				android:id="@+id/detail_servingNumLBL"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 		</LinearLayout>
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -175,13 +176,13 @@
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
 				android:text="@string/mealSTR"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 			<TextView
 				android:id="@+id/detail_mealLBL"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
-				android:textColor="@color/black" />
+				android:textColor="@color/black"/>
 		</LinearLayout>
 	</LinearLayout>
 	<TextView
@@ -191,5 +192,5 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		android:text=""
-		tools:visibility="gone" />
+		tools:visibility="gone"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

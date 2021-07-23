@@ -16,16 +16,6 @@
     <data-sources>
       <data-source>
         <option name="deviceId" value="EMULATOR_Pixel_2_API_28" />
-        <option name="name" value="Android SQLite" />
-        <option name="comment" />
-        <option name="packageName" value="com.geoffvargo.calorietracker" />
-        <option name="databaseName" value="calorieTracker.db" />
-        <classpath-elements>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
-        </classpath-elements>
-      </data-source>
-      <data-source>
-        <option name="deviceId" value="EMULATOR_Pixel_2_API_28" />
         <option name="name" value="Calorie Tracker Android SQLite" />
         <option name="comment" />
         <option name="packageName" value="com.geoffvargo.calorietracker" />
@@ -70,13 +60,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_content.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+    <list default="true" id="319b289b-295c-4f41-ab81-aecca65a4cc3" name="Default Changelist" comment="Major improvements made to GUI, and are still underway.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/SettingsActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/app_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/app_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fooditem_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fooditem_view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,13 +152,14 @@
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
     <property name="DEBUGGABLE_PROCESS" value="com.geoffvargo.calorietracker" />
     <property name="DEBUGGER_ID" value="Java" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Users\Owner\.android\avd\Pixel_2_API_28.avd" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-25T23:59:06.079833800Z" />
     <property name="ResourceManagerPrefKey.ResourceType" value="COLOR" />
@@ -183,7 +180,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.5697211" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
   </component>
   <component name="PsdUISettings">
@@ -191,6 +188,9 @@
     <option name="BUILD_VARIANTS_TAB" value="Build Types" />
     <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="showRenderedDocs" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.167617798">
@@ -271,15 +271,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -329,7 +327,15 @@
       <workItem from="1625874054626" duration="6218000" />
       <workItem from="1626071691907" duration="2249000" />
       <workItem from="1626154064369" duration="7211000" />
-      <workItem from="1626214234447" duration="10770000" />
+      <workItem from="1626214234447" duration="11490000" />
+      <workItem from="1626314836355" duration="127000" />
+      <workItem from="1626314982642" duration="12728000" />
+      <workItem from="1626470366509" duration="688000" />
+      <workItem from="1626472661938" duration="4563000" />
+      <workItem from="1626573298989" duration="2214000" />
+      <workItem from="1626673833328" duration="4722000" />
+      <workItem from="1626679279246" duration="4621000" />
+      <workItem from="1626937931622" duration="5898000" />
     </task>
     <task id="LOCAL-00001" summary="INITIAL COMMIT">
       <created>1624489972029</created>
@@ -569,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625530670270</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Major improvements made to GUI, and are still underway.">
+      <created>1626245130263</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1626245130263</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +604,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="LIMIT_HISTORY" value="false" />
-    <MESSAGE value="Updated SQL for the CalorieTrackerDBhelper class." />
     <MESSAGE value="Finished creating the 'food_item' table." />
     <MESSAGE value="Renamed class CalorieTrackerDBhelper to FoodItemDBHelper; started creating class FoodItemDataSource." />
     <MESSAGE value="Created FoodItem class to represent the current database row." />
@@ -616,47 +628,25 @@
     <MESSAGE value="Started implementing the InsightsActivity." />
     <MESSAGE value="Added the comment &quot;/* Geoff Vargo 101908362 */&quot; to the top of all the java files." />
     <MESSAGE value="PROJECT SUBMITTED" />
-    <option name="LAST_COMMIT_MESSAGE" value="PROJECT SUBMITTED" />
+    <MESSAGE value="Major improvements made to GUI, and are still underway." />
+    <option name="LAST_COMMIT_MESSAGE" value="Major improvements made to GUI, and are still underway." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/EditFoodItem.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/EditFoodItem.java</url>
-          <line>126</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java</url>
-          <line>136</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/SettingsActivity.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemAdapter.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/geoffvargo/calorietracker/FoodItemDataSource.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog>
+          <selected-grouping-rules>
+            <grouping-rule id="by-file" />
+          </selected-grouping-rules>
+        </breakpoints-dialog>
+      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint enabled="true" type="java-exception">
           <properties>
