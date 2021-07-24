@@ -11,49 +11,22 @@ import java.sql.SQLException;
 import java.sql.*;
 import java.util.*;
 
-/**
- * The type Food item data source.
- */
 class FoodItemDataSource {
 	private SQLiteDatabase database;
 	private FoodItemDBHelper dbHelper;
 
-	// TODO: 7/23/2021 fix problem with saving all nutrient info properly (specifically the 'Fat' column)
-
-	/**
-	 * Instantiates a new Food item data source.
-	 *
-	 * @param context
-	 * 		the context used to instantiate the class
-	 */
 	FoodItemDataSource(Context context) {
 		dbHelper = new FoodItemDBHelper(context);
 	}
 
-	/**
-	 * Open.
-	 *
-	 * @throws SQLException
-	 * 		the sql exception
-	 */
 	public void open() throws SQLException {
 		database = dbHelper.getWritableDatabase();
 	}
 
-	/**
-	 * Close.
-	 */
 	public void close() {
 		dbHelper.close();
 	}
 
-	/**
-	 * Update item boolean.
-	 *
-	 * @param s
-	 * 		the s
-	 * @return the boolean
-	 */
 	public boolean updateItem(FoodItem s) {
 		boolean didSucceed = false;
 		try {
@@ -75,13 +48,6 @@ class FoodItemDataSource {
 		return didSucceed;
 	}
 
-	/**
-	 * Insert item boolean.
-	 *
-	 * @param s
-	 * 		the s
-	 * @return the boolean
-	 */
 	public boolean insertItem(FoodItem s) {
 		boolean didSucceed = false;
 		try {
@@ -102,16 +68,6 @@ class FoodItemDataSource {
 			Log.e(e.getClass().getCanonicalName(), e.getMessage(), e);
 		}
 		return didSucceed;
-
-//		try {
-//			String statement = "INSERT INTO food_item(food_name, servings, serving_size, time, calories, carbs, protein, fat, meal_name) " +
-//			                   "VALUES (" + foodItem.getFood_name() + ", " + foodItem.getServings() + ", " + foodItem.getServing_size() + ", " + foodItem.getTime() +
-//			                   ", " + foodItem.getCalories() + "," + foodItem.getCarbs() + ", " + foodItem.getProtein() + ", " + foodItem.getFat() + ", " +
-//			                   foodItem.getMeal_name() + ");";
-//			database.execSQL(statement);
-//		} catch (Exception e) {
-//			Log.e("calorieTracker", e.getMessage(), e);
-//		}
 	}
 
 	public boolean deleteItem(FoodItem s) {
@@ -124,13 +80,6 @@ class FoodItemDataSource {
 		return didDelete;
 	}
 
-	/**
-	 * Gets items.
-	 *
-	 * @param sortBy
-	 * @param sortOrder
-	 * @return the items
-	 */
 	public ArrayList<FoodItem> getItems(String sortBy, String sortOrder) {
 		ArrayList<FoodItem> items = new ArrayList<>();
 

@@ -176,7 +176,7 @@ public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDi
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				curr.setProtein(Float.parseFloat(fat.getText().toString()));
+				curr.setFat(Float.parseFloat(fat.getText().toString()));
 			}
 		});
 		mealChooser.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
