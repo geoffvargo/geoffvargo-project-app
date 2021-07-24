@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.sql.*;
 import java.util.*;
 
+// TODO: 7/24/2021 fix problem with the "Serving Size" column
+
 class FoodItemDataSource {
 	private SQLiteDatabase database;
 	private FoodItemDBHelper dbHelper;
