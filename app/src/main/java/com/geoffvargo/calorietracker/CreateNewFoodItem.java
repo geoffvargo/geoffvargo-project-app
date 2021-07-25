@@ -26,6 +26,7 @@ public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDi
 	private FoodItem curr;
 	private EditText name;
 	private EditText serving_size;
+	private EditText serving_num;
 	private EditText calories;
 	private EditText carbs;
 	private EditText protein;
@@ -89,6 +90,7 @@ public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDi
 		name = findViewById(R.id.foodItemNameINPUT);
 		calories = findViewById(R.id.foodItemCaloriesINPUT);
 		serving_size = findViewById(R.id.foodItemServingSizeINPUT);
+		serving_num = findViewById(R.id.foodItemServingsINPUT);
 		carbs = findViewById(R.id.foodItemCarbsINPUT);
 		protein = findViewById(R.id.foodItemProteinINPUT);
 		fat = findViewById(R.id.foodItemFatINPUT);
@@ -135,6 +137,20 @@ public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDi
 			@Override
 			public void afterTextChanged(Editable s) {
 				curr.setCalories(Integer.parseInt(serving_size.getText().toString()));
+			}
+		});
+		serving_num.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				curr.setServings(Integer.parseInt(serving_num.getText().toString()));
 			}
 		});
 		carbs.addTextChangedListener(new TextWatcher() {
