@@ -54,4 +54,6 @@
 	<string name="descendingRB_STR">Descending</string>
 	<string name="timestampRB_STR">Date and Time</string>
 	<string name="serving_numberLBL_STR">"Number of Servings: "</string>
+	<string name="homeITEM_STR">HOME</string>
+	<string name="todayITEM_STR">TODAY</string>
 </resources>

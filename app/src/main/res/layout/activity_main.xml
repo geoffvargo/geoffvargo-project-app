@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 	<androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -9,7 +10,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:fitsSystemWindows="true"
-		app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+		app:layout_constraintBottom_toTopOf="@+id/bottomNavLAYOUT"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent">
@@ -69,22 +70,43 @@
 		<include layout="@layout/bottom_content"/>
 	
 	</androidx.coordinatorlayout.widget.CoordinatorLayout>
-	<com.google.android.material.bottomnavigation.BottomNavigationView
-		android:id="@+id/bottomNavigationView2"
-		android:layout_width="0dp"
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/bottomNavLAYOUT"
+		android:layout_width="match_parent"
 		android:layout_height="96dp"
 		android:background="@color/holo_blue_dark"
-		android:fitsSystemWindows="true"
-		app:itemBackground="@color/holo_blue_dark"
+		android:elevation="0dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent">
-		<!--		<Button-->
-		<!--			android:id="@+id/button"-->
-		<!--			android:layout_width="wrap_content"-->
-		<!--			android:layout_height="wrap_content"-->
-		<!--			android:text="Button"/>-->
-	</com.google.android.material.bottomnavigation.BottomNavigationView>
+		<ImageButton
+			android:id="@+id/homeNavBTN"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:layout_weight="1"
+			android:background="@color/holo_blue_dark"
+			android:contentDescription="@string/homeITEM_STR"
+			app:layout_constraintEnd_toStartOf="@+id/todayNavBTN"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/ic_home"/>
+		<ImageButton
+			android:id="@+id/todayNavBTN"
+			style="@android:style/Widget.DeviceDefault.ImageButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:layout_weight="1"
+			android:background="@color/holo_blue_dark"
+			android:contentDescription="@string/todayITEM_STR"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/homeNavBTN"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/ic_action_insight"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 	
 	<!--<?xml version="1.0" encoding="utf-8"?>-->
