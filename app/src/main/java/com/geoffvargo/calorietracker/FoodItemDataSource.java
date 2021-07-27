@@ -35,6 +35,8 @@ class FoodItemDataSource {
 
 			initialValues.put("food_name", s.getFood_name());
 			initialValues.put("calories", s.getCalories());
+			initialValues.put("serving_size", s.getServing_size());
+			initialValues.put("servings", s.getServings());
 			initialValues.put("carbs", s.getCarbs());
 			initialValues.put("protein", s.getProtein());
 			initialValues.put("fat", s.getFat());
@@ -57,6 +59,7 @@ class FoodItemDataSource {
 			initialValues.put("food_name", s.getFood_name());
 			initialValues.put("calories", s.getCalories());
 			initialValues.put("serving_size", s.getServing_size());
+			initialValues.put("servings", s.getServings());
 			initialValues.put("carbs", s.getCarbs());
 			initialValues.put("protein", s.getProtein());
 			initialValues.put("fat", s.getFat());

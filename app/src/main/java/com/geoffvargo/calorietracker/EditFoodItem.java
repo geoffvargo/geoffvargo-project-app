@@ -184,7 +184,24 @@ public class EditFoodItem extends AppCompatActivity {
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				curr.setCalories(Integer.parseInt(serving_size.getText().toString()));
+				String s1 = serving_size.getText().toString();
+				if (!s1.isEmpty()) {
+					curr.setServing_size(Float.parseFloat(s1));
+				}
+			}
+		});
+		servings.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				curr.setServings(Float.parseFloat(servings.getText().toString()));
 			}
 		});
 		carbs.addTextChangedListener(new TextWatcher() {
@@ -226,7 +243,7 @@ public class EditFoodItem extends AppCompatActivity {
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				curr.setProtein(Float.parseFloat(fat.getText().toString()));
+				curr.setFat(Float.parseFloat(fat.getText().toString()));
 			}
 		});
 		mealChooser.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

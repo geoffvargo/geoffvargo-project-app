@@ -136,7 +136,7 @@ public class CreateNewFoodItem extends AppCompatActivity implements TimePickerDi
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				curr.setCalories(Integer.parseInt(serving_size.getText().toString()));
+				curr.setServing_size(Integer.parseInt(serving_size.getText().toString()));
 			}
 		});
 		serving_num.addTextChangedListener(new TextWatcher() {
