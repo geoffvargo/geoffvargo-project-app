@@ -56,4 +56,5 @@
 	<string name="serving_numberLBL_STR">"Number of Servings: "</string>
 	<string name="homeITEM_STR">HOME</string>
 	<string name="todayITEM_STR">TODAY</string>
+	<string name="mealsITEM_STR">MEALS</string>
 </resources>
