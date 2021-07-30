@@ -87,7 +87,7 @@
 			android:layout_margin="8dp"
 			android:background="@color/holo_blue_dark"
 			android:contentDescription="@string/homeITEM_STR"
-			android:drawableTop="@drawable/ic_outline_home_40"
+			android:drawableTop="@drawable/ic_outline_home_36"
 			android:text="@string/homeITEM_STR"
 			app:layout_constraintEnd_toStartOf="@+id/todayNavBTN"
 			app:layout_constraintHorizontal_bias="0.5"
@@ -103,26 +103,25 @@
 			android:background="@color/holo_blue_dark"
 			android:contentDescription="@string/todayITEM_STR"
 			android:drawableTop="@drawable/ic_outline_today_36"
-			
 			app:layout_constraintEnd_toStartOf="@+id/mealsNavBTN"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toEndOf="@+id/homeNavBTN"
 			app:layout_constraintTop_toTopOf="parent"
 			tools:text="@string/todayITEM_STR"/>
-		<ImageButton
+		<Button
 			android:id="@+id/mealsNavBTN"
-			style="@android:style/Widget.DeviceDefault.ImageButton"
+			style="@style/Widget.AppCompat.Button.Borderless"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_margin="@dimen/fab_margin"
+			android:layout_margin="8dp"
 			android:background="@color/holo_blue_dark"
 			android:contentDescription="@string/mealsITEM_STR"
-			android:translationY="-2dp"
+			android:drawableTop="@drawable/ic_meals_36"
+			android:text="@string/mealsITEM_STR"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toEndOf="@+id/todayNavBTN"
-			app:layout_constraintTop_toTopOf="parent"
-			app:srcCompat="@drawable/ic_meals_36"/>
+			app:layout_constraintTop_toTopOf="parent"/>
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 	
