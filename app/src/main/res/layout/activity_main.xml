@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 	<androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -73,7 +72,7 @@
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/bottomNavLAYOUT"
 		android:layout_width="match_parent"
-		android:layout_height="100dp"
+		android:layout_height="120dp"
 		android:background="@color/holo_blue_dark"
 		android:elevation="0dp"
 		app:layout_constraintBottom_toBottomOf="parent"
@@ -89,6 +88,7 @@
 			android:contentDescription="@string/homeITEM_STR"
 			android:drawableTop="@drawable/ic_outline_home_36"
 			android:text="@string/homeITEM_STR"
+			android:textColor="@color/white"
 			app:layout_constraintEnd_toStartOf="@+id/todayNavBTN"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintHorizontal_chainStyle="spread"
@@ -103,11 +103,12 @@
 			android:background="@color/holo_blue_dark"
 			android:contentDescription="@string/todayITEM_STR"
 			android:drawableTop="@drawable/ic_outline_today_36"
+			android:text="@string/todayITEM_STR"
+			android:textColor="?android:attr/textColorHint"
 			app:layout_constraintEnd_toStartOf="@+id/mealsNavBTN"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toEndOf="@+id/homeNavBTN"
-			app:layout_constraintTop_toTopOf="parent"
-			tools:text="@string/todayITEM_STR"/>
+			app:layout_constraintTop_toTopOf="parent"/>
 		<Button
 			android:id="@+id/mealsNavBTN"
 			style="@style/Widget.AppCompat.Button.Borderless"
@@ -118,6 +119,7 @@
 			android:contentDescription="@string/mealsITEM_STR"
 			android:drawableTop="@drawable/ic_meals_36"
 			android:text="@string/mealsITEM_STR"
+			android:textColor="?android:attr/textColorHint"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toEndOf="@+id/todayNavBTN"
