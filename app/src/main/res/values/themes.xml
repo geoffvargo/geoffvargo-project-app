@@ -15,8 +15,10 @@
 	</style>
 	<style name="bottom_nav" parent="Widget.AppCompat.Button.Borderless">
 		<!-- Customize your theme here. -->
-		<item name="colorOnPrimary">@color/white</item>
-		<item name="colorPrimary">@color/light_grey</item>
-		<item name="colorAccent">@color/light_grey</item>
+<!--		<item name="colorOnPrimary">@color/white</item>-->
+		<item name="colorPrimary">@color/holo_blue_dark</item>
+		<item name="colorAccent">@color/white</item>
+		<item name="colorButtonNormal">@color/light_grey</item>
+		<item name="colorControlHighlight">@color/white</item>
 	</style>
 </resources>
