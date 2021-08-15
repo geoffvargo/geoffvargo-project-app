@@ -4,14 +4,19 @@ package com.geoffvargo.calorietracker;
 
 import android.content.*;
 import android.os.*;
+import android.util.*;
 import android.view.*;
 import android.widget.*;
 
 import com.google.android.material.appbar.*;
+import com.google.android.material.bottomnavigation.*;
 import com.google.android.material.floatingactionbutton.*;
+
+import org.jetbrains.annotations.*;
 
 import java.util.*;
 
+import androidx.annotation.*;
 import androidx.appcompat.app.*;
 import androidx.core.content.*;
 import androidx.recyclerview.widget.*;
@@ -25,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 	private ImageButton insightsBTN;
 	private String sortBy;
 	private String sortOrder;
+	private BottomNavigationView bottomNavView;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,6 +67,26 @@ public class MainActivity extends AppCompatActivity {
 		fab.setOnClickListener(fabClick -> {
 			Intent intent = new Intent(MainActivity.this, CreateNewFoodItem.class);
 			startActivity(intent);
+		});
+
+		bottomNavView = findViewById(R.id.bottomNavVIEW);
+		bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+			@Override
+			public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+				switch (item.getItemId()) {
+					case R.id.homeNavITEM:
+						Log.d("bottomNav", "home");
+						return true;
+					case R.id.todayNavITEM:
+						Log.d("bottomNav", "today");
+						return true;
+					case R.id.mealsNavITEM:
+						Log.d("bottomNav", "meals");
+						return true;
+					default:
+						return true;
+				}
+			}
 		});
 	}
 
