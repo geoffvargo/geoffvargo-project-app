@@ -19,7 +19,6 @@ import androidx.core.content.*;
 import androidx.recyclerview.widget.*;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-	//public class MainActivity extends AppCompatActivity {
 	private RecyclerView foodItemView;
 	private ArrayList<FoodItem> foodItems = new ArrayList<>();
 	private FoodItemAdapter adapter;
@@ -48,24 +47,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 		w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 		w.setNavigationBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
 
-//		NavController navController = Navigation.findNavController(findViewById(R.id.fragmentContainerView));
-//		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
 //		toolBarLayout.setTitle(getTitle());
-//
-////		setSupportActionBar(findViewById(R.id.toolbar));
-//
-//		settingsBTN = findViewById(R.id.settingsBTN);
-//		settingsBTN.setOnClickListener(c -> {
-//			Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-//			startActivity(intent);
-//		});
-//
-//		FloatingActionButton fab = findViewById(R.id.newItemBTN);
-//		fab.setOnClickListener(fabClick -> {
-//			Intent intent = new Intent(MainActivity.this, CreateNewFoodItem.class);
-//			startActivity(intent);
-//		});
-//
+
 		bottomNavView = findViewById(R.id.bottomNavVIEW);
 		bottomNavView.setSelectedItemId(R.id.homeNavITEM);
 		bottomNavView.setOnNavigationItemSelectedListener(this);
@@ -76,30 +59,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 	@Override
 	protected void onResume() {
 		super.onResume();
-
-//		sortBy = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("field", "food_name");
-//		sortOrder = getSharedPreferences("Settings", Context.MODE_PRIVATE).getString("sortorder", "ASC");
-//
-//		FoodItemDataSource dataSource = new FoodItemDataSource(this);
-//
-//		try {
-//			dataSource.open();
-//			foodItems = dataSource.getItems(sortBy, sortOrder);
-//			dataSource.close();
-//
-//			if (foodItems.size() > 0) {
-//				foodItemView = findViewById(R.id.bottomContent);
-//				RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-//				foodItemView.setLayoutManager(layoutManager);
-//				adapter = new FoodItemAdapter(foodItems, this);
-//				foodItemView.setAdapter(adapter);
-//			} else {
-//				Intent intent = new Intent(MainActivity.this, CreateNewFoodItem.class);
-//				startActivity(intent);
-//			}
-//		} catch (Exception throwables) {
-//			Toast.makeText(this, "Error retrieving list.", Toast.LENGTH_LONG).show();
-//		}
 	}
 
 	public ArrayList<FoodItem> getFoodItems() {
