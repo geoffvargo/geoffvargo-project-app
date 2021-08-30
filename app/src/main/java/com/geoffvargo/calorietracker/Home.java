@@ -34,6 +34,8 @@ public class Home extends Fragment {
 //		return true;
 //	}
 
+	public Home() {
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -10,4 +10,14 @@
 		android:name="com.geoffvargo.calorietracker.Home"
 		android:label="fragment_home"
 		tools:layout="@layout/fragment_home"/>
+	<fragment
+		android:id="@+id/today"
+		android:name="com.geoffvargo.calorietracker.Today"
+		android:label="fragment_today"
+		tools:layout="@layout/fragment_today"/>
+	<fragment
+		android:id="@+id/meals"
+		android:name="com.geoffvargo.calorietracker.Meals"
+		android:label="fragment_meals"
+		tools:layout="@layout/fragment_meals"/>
 </navigation>

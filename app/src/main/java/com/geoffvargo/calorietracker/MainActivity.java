@@ -3,18 +3,23 @@
 package com.geoffvargo.calorietracker;
 
 import android.os.*;
+import android.util.*;
 import android.view.*;
 import android.widget.*;
 
 import com.google.android.material.bottomnavigation.*;
 
+import org.jetbrains.annotations.*;
+
 import java.util.*;
 
+import androidx.annotation.*;
 import androidx.appcompat.app.*;
 import androidx.core.content.*;
 import androidx.recyclerview.widget.*;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+	//public class MainActivity extends AppCompatActivity {
 	private RecyclerView foodItemView;
 	private ArrayList<FoodItem> foodItems = new ArrayList<>();
 	private FoodItemAdapter adapter;
@@ -24,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
 	private String sortBy;
 	private String sortOrder;
 	private BottomNavigationView bottomNavView;
+
+	private Home home = new Home();
+	private Today today = new Today();
+	private Meals meals = new Meals();
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -39,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 		w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 		w.setNavigationBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
 
+//		NavController navController = Navigation.findNavController(findViewById(R.id.fragmentContainerView));
 //		CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
 //		toolBarLayout.setTitle(getTitle());
 //
@@ -56,25 +66,11 @@ public class MainActivity extends AppCompatActivity {
 //			startActivity(intent);
 //		});
 //
-//		bottomNavView = findViewById(R.id.bottomNavVIEW);
-//		bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//			@Override
-//			public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-//				switch (item.getItemId()) {
-//					case R.id.homeNavITEM:
-//						Log.d("bottomNav", "home");
-//						return true;
-//					case R.id.todayNavITEM:
-//						Log.d("bottomNav", "today");
-//						return true;
-//					case R.id.mealsNavITEM:
-//						Log.d("bottomNav", "meals");
-//						return true;
-//					default:
-//						return true;
-//				}
-//			}
-//		});
+		bottomNavView = findViewById(R.id.bottomNavVIEW);
+		bottomNavView.setSelectedItemId(R.id.homeNavITEM);
+		bottomNavView.setOnNavigationItemSelectedListener(this);
+
+//		NavigationUI.setupWithNavController(bottomNavView., navController);
 	}
 
 	@Override
@@ -112,5 +108,24 @@ public class MainActivity extends AppCompatActivity {
 
 	public void setFoodItems(ArrayList<FoodItem> foodItems) {
 		this.foodItems = foodItems;
+	}
+
+	@Override
+	public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+		int itemId = item.getItemId();
+		if (itemId == R.id.homeNavITEM) {
+			getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, home).commit();
+			Log.d("bottomNav", "home");
+			return true;
+		} else if (itemId == R.id.todayNavITEM) {
+			getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, today).commit();
+			Log.d("bottomNav", "today");
+			return true;
+		} else if (itemId == R.id.mealsNavITEM) {
+			getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, meals).commit();
+			Log.d("bottomNav", "meals");
+			return true;
+		}
+		return false;
 	}
 }
