@@ -7,6 +7,7 @@ import android.os.*;
 import android.view.*;
 import android.widget.*;
 
+import com.geoffvargo.calorietracker.databinding.*;
 import com.google.android.material.appbar.*;
 import com.google.android.material.bottomnavigation.*;
 import com.google.android.material.floatingactionbutton.*;
@@ -28,6 +29,9 @@ public class Home extends Fragment {
 	private String sortOrder;
 	private BottomNavigationView bottomNavView;
 
+	private FragmentHomeBinding binding;
+//	private HomeViewModel homeViewModel;
+
 //	@Override
 //	public boolean onCreateOptionsMenu(Menu menu) {
 //		getActivity().getMenuInflater().inflate(R.menu.app_bar, menu);
@@ -39,7 +43,9 @@ public class Home extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_home, container, false);
+		binding = FragmentHomeBinding.inflate(inflater, container, false);
+//		View view = inflater.inflate(R.layout.fragment_home, container, false);
+		View view = binding.getRoot();
 		CollapsingToolbarLayout toolBarLayout = view.findViewById(R.id.toolbar_layout);
 		toolBarLayout.setTitle(getActivity().getTitle());
 
@@ -59,7 +65,8 @@ public class Home extends Fragment {
 		return view;
 	}
 
-	@Override
+
+	/*@Override
 	public void onResume() {
 		super.onResume();
 
@@ -86,7 +93,15 @@ public class Home extends Fragment {
 		} catch (Exception throwables) {
 			Toast.makeText(getActivity(), "Error retrieving list.", Toast.LENGTH_LONG).show();
 		}
+	}*/
+
+/*
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		binding = null;
 	}
+*/
 
 	public ArrayList<FoodItem> getFoodItems() {
 		return foodItems;

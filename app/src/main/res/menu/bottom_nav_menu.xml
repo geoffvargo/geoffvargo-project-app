@@ -4,22 +4,19 @@
 	
 	<item
 		android:id="@+id/homeNavITEM"
-		android:enabled="true"
 		android:icon="@drawable/ic_outline_home_36"
-		android:iconTint="@color/light_grey"
-		android:iconTintMode="src_over"
 		android:title="@string/homeITEM_STR"/>
+<!--		android:iconTint="@color/light_grey"-->
+<!--		android:iconTintMode="src_over"-->
 	<item
 		android:id="@+id/todayNavITEM"
-		android:enabled="true"
 		android:icon="@drawable/ic_outline_today_36"
-		android:iconTint="@color/light_grey"
 		android:title="@string/todayITEM_STR"/>
+<!--		android:iconTint="@color/light_grey"-->
 	<item
 		android:id="@+id/mealsNavITEM"
-		android:enabled="true"
 		android:icon="@drawable/ic_meals_36"
-		android:iconTint="@color/light_grey"
-		android:iconTintMode="src_over"
 		android:title="@string/mealsITEM_STR"/>
+<!--		android:iconTint="@color/light_grey"-->
+<!--		android:iconTintMode="src_over"-->
 </menu>

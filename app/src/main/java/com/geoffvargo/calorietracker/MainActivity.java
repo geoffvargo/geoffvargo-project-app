@@ -3,7 +3,6 @@
 package com.geoffvargo.calorietracker;
 
 import android.os.*;
-import android.view.*;
 import android.widget.*;
 
 import com.geoffvargo.calorietracker.databinding.*;
@@ -12,7 +11,6 @@ import com.google.android.material.bottomnavigation.*;
 import java.util.*;
 
 import androidx.appcompat.app.*;
-import androidx.core.content.*;
 import androidx.navigation.*;
 import androidx.navigation.ui.*;
 import androidx.recyclerview.widget.*;
@@ -29,20 +27,18 @@ public class MainActivity extends AppCompatActivity {
 	private ImageButton insightsBTN;
 	private String sortBy;
 	private String sortOrder;
-	private BottomNavigationView bottomNavView;
+//	private BottomNavigationView bottomNavView;
 	private NavController navController;
 
 	private Home home = new Home();
 	private Today today = new Today();
 	private Meals meals = new Meals();
 
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.app_bar, menu);
-		return true;
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		getMenuInflater().inflate(R.menu.app_bar, menu);
+//		return true;
+//	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,25 +48,18 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(binding.getRoot());
 
 //		setContentView(R.layout.activity_main);
-		Window w = getWindow();
-		w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-		w.setNavigationBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
-
-
+//		Window w = getWindow();
+//		w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//		w.setNavigationBarColor(ContextCompat.getColor(this, android.R.color.holo_blue_dark));
 
 //		toolBarLayout.setTitle(getTitle());
 
-		bottomNavView = findViewById(R.id.bottomNavVIEW);
+		BottomNavigationView bottomNavView = findViewById(R.id.bottomNavVIEW);
 //		bottomNavView.setSelectedItemId(R.id.homeNavITEM);
 //		bottomNavView.setOnNavigationItemSelectedListener(this);
-		NavController navController = Navigation.findNavController(this, R.id.navHost);
+		NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
 
 		NavigationUI.setupWithNavController(binding.bottomNavVIEW, navController);
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
 	}
 
 	public ArrayList<FoodItem> getFoodItems() {
